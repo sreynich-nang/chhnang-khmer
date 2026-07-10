@@ -16,6 +16,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
+
     <style>
       body {
         background-color: #fbfaee;
@@ -122,6 +123,41 @@
         background-color: #e67e22 !important;
         border-color: #e67e22 !important;
         color: #fff !important;
+      }
+
+      .meal-card-section3 {
+        transition: all 0.3s ease;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      .meal-card-section3:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12) !important;
+      }
+      .meal-card-section3 .card-img-wrapper {
+        overflow: hidden;
+        position: relative;
+      }
+      .meal-card-section3 img {
+        transition: transform 0.5s ease;
+        height: 220px;
+        object-fit: cover;
+        width: 100%;
+      }
+      .meal-card-section3:hover img {
+        transform: scale(1.06);
+      }
+      .btn-add-section3 {
+        background-color: #fed65b;
+        color: #212529;
+        border: 1px solid #fed65b;
+        transition: all 0.2s ease;
+      }
+      .btn-add-section3:hover {
+        background-color: #e67e22;
+        border-color: #e67e22;
+        color: #fff;
+        transform: scale(1.05);
       }
     </style>
   </head>
@@ -450,6 +486,121 @@
             >
               Add to Card
             </button>
+          </div>
+        </div>
+      </div>
+      <!-- people also orderd -->
+      <div class="mt-5 pt-3">
+        <h2 class="fw-bold mb-4 text-dark">People Also Ordered</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <!-- card1: Lok Lak -->
+          <div class="col">
+            <div
+              class="card meal-card-section3 h-100 border border-secondary-subtle bg-white shadow-sm"
+            >
+              <div class="card-img-wrapper">
+                <img
+                  src="https://malis.thalias.com.kh/wp-content/uploads/2024/07/DST_6265-1-921x1024.jpg"
+                  class="card-img-top"
+                  alt="Lok Lak"
+                />
+              </div>
+              <div class="card-body d-flex flex-column">
+                <div class="flex-grow-1">
+                  <div class="mb-2">
+                    <span class="badge bg-warning text-dark">Signature</span>
+                    <span class="badge bg-secondary text-white">35 Mins</span>
+                  </div>
+                  <h4 class="fw-bold mt-2">Lok Lak</h4>
+                  <p class="text-muted small">
+                    Sizzling beef with lime-pepper dip.
+                  </p>
+                </div>
+                <div
+                  class="mt-3 pt-2 border-top d-flex justify-content-between align-items-center"
+                >
+                  <h5 class="text-warning fw-bold mb-0">$12.00</h5>
+                  <button
+                    class="btn btn-sm rounded-pill px-3 fw-semibold btn-add-section3"
+                    onclick="window.location.href = 'p3_detailpage.html'"
+                  >
+                    Add
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- card2: Kuy Teav -->
+          <div class="col">
+            <div
+              class="card meal-card-section3 h-100 border border-secondary-subtle bg-white shadow-sm"
+            >
+              <div class="card-img-wrapper">
+                <img
+                  src="https://malis.thalias.com.kh/wp-content/uploads/2024/07/DST_4752-1536x1025.jpg"
+                  class="card-img-top"
+                  alt="Kuy Teav"
+                />
+              </div>
+              <div class="card-body d-flex flex-column">
+                <div class="flex-grow-1">
+                  <div class="mb-2">
+                    <span class="badge bg-secondary text-white">25 Mins</span>
+                  </div>
+                  <h4 class="fw-bold mt-2">Kuy Teav</h4>
+                  <p class="text-muted small">Traditional rice noodle soup.</p>
+                </div>
+                <div
+                  class="mt-3 pt-2 border-top d-flex justify-content-between align-items-center"
+                >
+                  <h5 class="text-warning fw-bold mb-0">$8.50</h5>
+                  <button
+                    class="btn btn-sm rounded-pill px-3 fw-semibold btn-add-section3"
+                    onclick="window.location.href = 'p3_detailpage.html'"
+                  >
+                    Add
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- card3: Beef Sour Soup -->
+          <div class="col">
+            <div
+              class="card meal-card-section3 h-100 border border-secondary-subtle bg-white shadow-sm"
+            >
+              <div class="card-img-wrapper">
+                <img
+                  src="https://malis.thalias.com.kh/wp-content/uploads/elementor/thumbs/1_MalisPP_a-rln6rqsv6feh7tgci62gl43rcilqqi2zwg1bzdb5ag.jpg"
+                  class="card-img-top"
+                  alt="Beef Sour Soup"
+                />
+              </div>
+              <div class="card-body d-flex flex-column">
+                <div class="flex-grow-1">
+                  <div class="mb-2">
+                    <span class="badge bg-secondary text-white">40 Mins</span>
+                  </div>
+                  <h4 class="fw-bold mt-2">Beef Sour Soup</h4>
+                  <p class="text-muted small">
+                    Herbal broth with morning glory.
+                  </p>
+                </div>
+                <div
+                  class="mt-3 pt-2 border-top d-flex justify-content-between align-items-center"
+                >
+                  <h5 class="text-warning fw-bold mb-0">$11.25</h5>
+                  <button
+                    class="btn btn-sm rounded-pill px-3 fw-semibold btn-add-section3"
+                    onclick="window.location.href = 'p3_detailpage.html'"
+                  >
+                    Add
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
