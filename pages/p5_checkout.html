@@ -277,9 +277,14 @@
             </div>
             <h3 class="fw-bold text-dark mb-2 font-title">Order Placed Successfully!</h3>
             <p class="text-secondary mb-4">Thank you for ordering with Chhnang Khmer! Your recipe kit is being prepared and will be delivered shortly.</p>
-            <a href="p1_homepage.html" class="btn btn-brand-orange px-4 py-2 rounded-pill fw-bold text-decoration-none">
-              Back to Home
-            </a>
+            <div class="d-flex flex-column gap-2 align-items-center justify-content-center mx-auto" style="max-width: 250px;">
+              <a href="p6_trackorder.html" class="btn btn-brand-orange w-100 py-2 rounded-pill fw-bold text-decoration-none">
+                Track your Order
+              </a>
+              <a href="p1_homepage.html" class="btn btn-outline-secondary w-100 py-2 rounded-pill fw-bold text-decoration-none">
+                Back to Home
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -302,7 +307,7 @@
       }
 
       loadComponent("components/footer.html", "footer");
-      loadComponent("components/nav.html", "navbar");
+      loadComponent("components/nav_no_search.html", "navbar");
 
       function simulateOrder() {
         var myModal = new bootstrap.Modal(document.getElementById('orderSuccessModal'));
