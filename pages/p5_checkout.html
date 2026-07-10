@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chhnang Khmer - Checkout</title>
+    <!-- bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <!-- google-icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+      body {
+        background-color: #fbfaee;
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        padding-top: 85px; /* Offset for the fixed-top navbar */
+      }
+      .font-title {
+        font-family: 'Outfit', sans-serif;
+      }
+      .text-brand-orange {
+        color: #e67e22 !important;
+      }
+      .btn-brand-orange {
+        background-color: #fed65b;
+        color: #212529;
+        border: 1px solid #fed65b;
+        transition: all 0.2s ease;
+      }
+      .btn-brand-orange:hover {
+        background-color: #e67e22;
+        border-color: #e67e22;
+        color: #fff;
+      }
+      
+      /* Input styles */
+      .form-control, .form-select {
+        padding: 0.75rem 1rem;
+        border-radius: 10px;
+        border: 1px solid #dee2e6;
+        background-color: #f9f9f6;
+        font-size: 0.95rem;
+        transition: all 0.2s ease-in-out;
+      }
+      .form-control:focus, .form-select:focus {
+        background-color: #fff;
+        border-color: #e67e22;
+        box-shadow: 0 0 0 0.25rem rgba(230, 126, 34, 0.15);
+      }
+      
+      /* Payment Method Card styling */
+      .payment-card {
+        border: 2px solid #dee2e6;
+        border-radius: 12px;
+        transition: all 0.2s ease-in-out;
+        background-color: #fff;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      .payment-card:hover {
+        background-color: #f8f9fa;
+        border-color: #ced4da;
+        transform: translateY(-2px);
+      }
+      .btn-check:checked + .payment-card {
+        border-color: #e67e22 !important;
+        background-color: rgba(230, 126, 34, 0.05);
+        box-shadow: 0 4px 12px rgba(230, 126, 34, 0.12);
+      }
+      
+      /* Order Summary styling */
+      .summary-box {
+        background-color: #5d4037; /* Clay Brown */
+        color: #ffffff;
+        border-radius: 16px;
+        padding: 1.5rem;
+        box-shadow: 0 10px 25px rgba(93, 64, 55, 0.15);
+      }
+      .summary-box h3 {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 0.75rem;
+      }
+      .summary-box .opacity-80 {
+        opacity: 0.85;
+      }
+      .btn-place-order {
+        background-color: #fed65b; /* Brand Yellow */
+        color: #212529;
+        font-weight: 700;
+        border: none;
+        border-radius: 50px;
+        padding: 0.75rem 1.5rem;
+        transition: all 0.2s ease-in-out;
+      }
+      .btn-place-order:hover {
+        background-color: #f7c324;
+        color: #000;
+        transform: translateY(-2px);
+      }
+      .btn-place-order:active {
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--navbar -->
+    <div id="navbar"></div>
+
+    <!-- homepage content -->
+    <main class="container py-4">
+      <!-- Heading: Finalize your Order -->
+      <h1 class="fw-bold mb-4 text-dark font-title">Finalize your Order</h1>
+
+      <div class="row g-4 align-items-start">
+        <!-- Left Column: Forms -->
+        <div class="col-lg-8 d-flex flex-column gap-4">
+          
+          <!-- Section 1: Delivery Info -->
+          <section class="card p-3 p-md-4 border border-secondary-subtle bg-white rounded-4 shadow-sm">
+            <div class="mb-4">
+              <h2 class="h4 fw-bold text-dark mb-0 font-title">Delivery Information</h2>
+            </div>
+            
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label fw-semibold text-secondary-emphasis small mb-1">Full Name</label>
+                <input class="form-control" placeholder="Adira" type="text">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold text-secondary-emphasis small mb-1">Phone Number</label>
+                <input class="form-control" placeholder="+855 xx xxx xxx" type="tel">
+              </div>
+              <div class="col-12">
+                <label class="form-label fw-semibold text-secondary-emphasis small mb-1">Delivery Address</label>
+                <input class="form-control" placeholder="House #123, St 456, Boeung Keng Kang I, Phnom Penh" type="text">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold text-secondary-emphasis small mb-1">Delivery Date</label>
+                <input class="form-control" type="date">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold text-secondary-emphasis small mb-1">Delivery Time</label>
+                <select class="form-select">
+                  <option>09:00 AM - 11:00 AM</option>
+                  <option>11:00 AM - 01:00 PM</option>
+                  <option>01:00 PM - 03:00 PM</option>
+                  <option>03:00 PM - 05:00 PM</option>
+                </select>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 2: Payment Method -->
+          <section class="card p-3 p-md-4 border border-secondary-subtle bg-white rounded-4 shadow-sm">
+            <div class="mb-4">
+              <h2 class="h4 fw-bold text-dark mb-0 font-title">Payment Method</h2>
+            </div>
+            
+            <div class="row g-3">
+              <!-- ABA -->
+              <div class="col-4">
+                <input type="radio" class="btn-check" name="payment" id="payment-aba" checked>
+                <label class="card p-3 text-center payment-card border-2 transition-all" for="payment-aba">
+                  <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                    <div class="logo-wrapper mb-2">
+                      <img src="../assets/images/aba.png" alt="ABA Pay" class="payment-logo rounded-circle" style="width: 48px; height: 48px; object-fit: cover;">
+                    </div>
+                    <span class="fw-bold small text-dark">ABA Pay</span>
+                  </div>
+                </label>
+              </div>
+              
+              <!-- ACLEDA -->
+              <div class="col-4">
+                <input type="radio" class="btn-check" name="payment" id="payment-acleda">
+                <label class="card p-3 text-center payment-card border-2 transition-all" for="payment-acleda">
+                  <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                    <div class="logo-wrapper mb-2">
+                      <img src="../assets/images/aclida.png" alt="ACLEDA" class="payment-logo rounded-circle" style="width: 48px; height: 48px; object-fit: cover;">
+                    </div>
+                    <span class="fw-bold small text-dark">ACLEDA</span>
+                  </div>
+                </label>
+              </div>
+              
+              <!-- Wing -->
+              <div class="col-4">
+                <input type="radio" class="btn-check" name="payment" id="payment-wing">
+                <label class="card p-3 text-center payment-card border-2 transition-all" for="payment-wing">
+                  <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                    <div class="logo-wrapper mb-2">
+                      <img src="../assets/images/wing.png" alt="Wing" class="payment-logo rounded-circle" style="width: 48px; height: 48px; object-fit: cover;">
+                    </div>
+                    <span class="fw-bold small text-dark">Wing</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Right Column: Order Summary -->
+        <aside class="col-lg-4 sticky-top" style="top: 100px;">
+          <div class="summary-box">
+            <h3 class="h4 fw-bold mb-3 font-title">Order Summary</h3>
+            <div class="d-flex flex-column gap-3 mb-4">
+              
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <p class="fw-semibold mb-0">Amok Fish Kit</p>
+                  <p class="small text-white-50 mb-0">2 Servings</p>
+                </div>
+                <p class="fw-semibold mb-0">$14.00</p>
+              </div>
+              
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <p class="fw-semibold mb-0">Beef Lok Lak Kit</p>
+                  <p class="small text-white-50 mb-0">2 Servings</p>
+                </div>
+                <p class="fw-semibold mb-0">$16.00</p>
+              </div>
+              
+              <div class="pt-3 border-t border-white-20 space-y-xs">
+                <div class="d-flex justify-content-between small opacity-80">
+                  <span>Subtotal</span>
+                  <span>$30.00</span>
+                </div>
+                <div class="d-flex justify-content-between small opacity-80 mt-1">
+                  <span>Delivery Fee</span>
+                  <span>$1.50</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <span class="h4 fw-bold mb-0">Total</span>
+              <span class="h4 fw-bold text-warning mb-0">$31.50</span>
+            </div>
+            
+            <button class="btn btn-place-order w-100 py-3 d-flex align-items-center justify-content-center gap-2" onclick="simulateOrder()">
+              <span>Place Order</span>
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+            
+            <p class="small text-center mt-3 opacity-60 mb-0 italic">Secure checkout powered by Chhnang Khmer</p>
+          </div>
+
+        </aside>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <div id="footer"></div>
+
+    <!-- Order Success Modal -->
+    <div class="modal fade" id="orderSuccessModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="orderSuccessModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 rounded-4 shadow-lg" style="background-color: #fbfaee;">
+          <div class="modal-body text-center p-5">
+            <div class="mb-4">
+              <span class="material-symbols-outlined text-success display-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+            </div>
+            <h3 class="fw-bold text-dark mb-2 font-title">Order Placed Successfully!</h3>
+            <p class="text-secondary mb-4">Thank you for ordering with Chhnang Khmer! Your recipe kit is being prepared and will be delivered shortly.</p>
+            <a href="p1_homepage.html" class="btn btn-brand-orange px-4 py-2 rounded-pill fw-bold text-decoration-none">
+              Back to Home
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- bootstrap JS Bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Loader Script -->
+    <script>
+      function loadComponent(url, elementId) {
+        fetch(url)
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById(elementId).innerHTML = data;
+          });
+      }
+
+      loadComponent("components/footer.html", "footer");
+      loadComponent("components/nav.html", "navbar");
+
+      function simulateOrder() {
+        var myModal = new bootstrap.Modal(document.getElementById('orderSuccessModal'));
+        myModal.show();
+      }
+    </script>
+  </body>
+</html>
