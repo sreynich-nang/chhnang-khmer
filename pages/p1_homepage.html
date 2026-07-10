@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chhnang Khmer</title>
     <!-- bootstrap CSS -->
     <link
@@ -21,14 +21,29 @@
         background-color: #fbfaee;
         padding-top: 85px; /* Offset for the fixed-top navbar */
       }
+      .category-card-section2 {
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+      .category-card-section2:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+      }
+      .category-card-section2 .rounded-circle {
+        transition: all 0.3s ease;
+      }
+      .category-card-section2:hover .rounded-circle {
+        background-color: #e67e22 !important;
+        color: #fff !important;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-<!--navbar -->
+  <body>
+    <!--navbar -->
     <div id="navbar"></div>
-    
-<!-- homepage content -->
+
+    <!-- homepage content -->
     <!-- hero section -->
     <section
       class="position-relative vh-100 d-flex align-items-center overflow-hidden"
@@ -57,19 +72,126 @@
           <button
             id="id_orderBtn"
             class="btn btn-warning btn-lg rounded-pill px-5 fw-bold"
-            style="background-color: #fed65b; border-color: #fed65b; color: #212529; transition: all 0.3s ease;"
-            onmouseover="this.style.color='#e67e22'; document.getElementById('id_orderText').style.transform='translateX(6px)';"
-            onmouseout="this.style.color='#212529'; document.getElementById('id_orderText').style.transform='translateX(0)';"
+            style="
+              background-color: #fed65b;
+              border-color: #fed65b;
+              color: #212529;
+              transition: all 0.3s ease;
+            "
+            onmouseover="
+              this.style.color = '#e67e22';
+              document.getElementById('id_orderText').style.transform =
+                'translateX(6px)';
+            "
+            onmouseout="
+              this.style.color = '#212529';
+              document.getElementById('id_orderText').style.transform =
+                'translateX(0)';
+            "
           >
-            <span id="id_orderText" style="display: inline-block; transition: all 0.3s ease;">Order Now</span>
+            <span
+              id="id_orderText"
+              style="display: inline-block; transition: all 0.3s ease"
+              >Order Now</span
+            >
           </button>
         </div>
       </div>
     </section>
 
+    <!-- browser by category section -->
+    <section class="py-5 bg-light position-relative">
+      <div class="container">
+        <h2 class="fw-bold text-center text-md-start mb-5">
+          Browse by Category
+        </h2>
+
+        <!-- Categories -->
+        <div class="row g-3">
+          <!-- Breakfast -->
+          <div class="col-6 col-md-3">
+            <div
+              class="card text-center shadow-sm border-0 h-100 category-card-section2"
+            >
+              <div class="card-body">
+                <div
+                  class="rounded-circle bg-warning d-flex justify-content-center align-items-center mx-auto mb-3"
+                  style="width: 70px; height: 70px"
+                >
+                  <span class="material-symbols-outlined fs-1">
+                    breakfast_dining
+                  </span>
+                </div>
+                <p class="mb-0">Breakfast</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lunch -->
+          <div class="col-6 col-md-3">
+            <div
+              class="card text-center shadow-sm border-0 h-100 category-card-section2"
+            >
+              <div class="card-body">
+                <div
+                  class="rounded-circle bg-warning d-flex justify-content-center align-items-center mx-auto mb-3"
+                  style="width: 70px; height: 70px"
+                >
+                  <span class="material-symbols-outlined fs-1">
+                    lunch_dining
+                  </span>
+                </div>
+                <p class="mb-0">Lunch</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dinner -->
+          <div class="col-6 col-md-3">
+            <div
+              class="card text-center shadow-sm border-0 h-100 category-card-section2"
+            >
+              <div class="card-body">
+                <div
+                  class="rounded-circle bg-warning d-flex justify-content-center align-items-center mx-auto mb-3"
+                  style="width: 70px; height: 70px"
+                >
+                  <span class="material-symbols-outlined fs-1">
+                    dinner_dining
+                  </span>
+                </div>
+                <p class="mb-0">Dinner</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dessert -->
+          <div class="col-6 col-md-3">
+            <div
+              class="card text-center shadow-sm border-0 h-100 category-card-section2"
+            >
+              <div class="card-body">
+                <div
+                  class="rounded-circle bg-warning d-flex justify-content-center align-items-center mx-auto mb-3"
+                  style="width: 70px; height: 70px"
+                >
+                  <span class="material-symbols-outlined fs-1"> icecream </span>
+                </div>
+                <p class="mb-0">Dessert</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- section poipular recipe -->
+    <section class="py-5 bg-light">
+        
+    </section>
 
 
-<!-- footer -->
+    <!-- footer -->
     <div id="footer"></div>
 
     <!-- bootstrap JS -->
@@ -92,5 +214,5 @@
       loadComponent("components/footer.html", "footer");
       loadComponent("components/nav.html", "navbar");
     </script>
-</body>
+  </body>
 </html>
