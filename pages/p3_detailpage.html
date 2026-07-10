@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- bootstrap CSS -->
     <link
@@ -14,15 +14,447 @@
     <!-- google-icons -->
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
-</head>
-<body>
-<!--navbar -->
+    <style>
+      body {
+        background-color: #fbfaee;
+        padding-top: 85px; /* Offset for the fixed-top navbar */
+      }
+      #rating-stars .star-icon {
+        font-variation-settings: "FILL" 0;
+        cursor: pointer;
+        transition: transform 0.1s ease;
+      }
+      #rating-stars .star-icon.filled {
+        font-variation-settings: "FILL" 1;
+      }
+      #rating-stars .star-icon:hover {
+        transform: scale(1.15);
+      }
+      .text-brand-orange {
+        color: #e67e22 !important;
+      }
+      .btn-add-to-card {
+        background-color: #fed65b;
+        border-color: #fed65b;
+        color: #212529;
+        transition: all 0.3s ease;
+      }
+      .btn-add-to-card:hover {
+        background-color: #e67e22;
+        border-color: #e67e22;
+        color: #fff;
+      }
+      /* Toast notification style */
+      .toast-notification {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #2e7d32; /* Success green */
+        color: white;
+        padding: 12px 24px;
+        border-radius: 50px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        z-index: 1050;
+        opacity: 0;
+        transform: translateY(20px);
+        transition:
+          opacity 0.3s ease,
+          transform 0.3s ease;
+        pointer-events: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 600;
+      }
+      .toast-notification.show {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+      /* Servings control button styles */
+      .btn-serving-control {
+        background-color: #e9ecef !important;
+        color: #212529 !important;
+        transition:
+          transform 0.1s ease,
+          background-color 0.2s ease;
+        border: none;
+      }
+      .btn-serving-control:hover {
+        background-color: #dee2e6 !important;
+      }
+      .btn-serving-control:active {
+        transform: scale(0.9);
+      }
+      /* Ingredient card styling */
+      .ingredient-card {
+        transition:
+          box-shadow 0.2s ease,
+          transform 0.2s ease;
+      }
+      .ingredient-card:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+        transform: translateY(-2px);
+      }
+      .btn-qty-control {
+        background-color: #ffffff !important;
+        color: #212529 !important;
+        border: none;
+        transition:
+          background-color 0.2s ease,
+          transform 0.1s ease;
+      }
+      .btn-qty-control:hover {
+        background-color: #f8f9fa !important;
+      }
+      .btn-qty-control:active {
+        transform: scale(0.9);
+      }
+      .btn-outline-brand {
+        border-color: #e67e22 !important;
+        color: #e67e22 !important;
+        background-color: transparent !important;
+        transition: all 0.3s ease;
+      }
+      .btn-outline-brand:hover {
+        background-color: #e67e22 !important;
+        border-color: #e67e22 !important;
+        color: #fff !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!--navbar -->
     <div id="navbar"></div>
 
+    <!-- main -->
+    <main class="container py-4">
+      <div class="row g-4 align-items-start">
+        <!-- Left Column: Details -->
+        <div class="col-md-7 col-lg-8">
+          <h1 class="display-4 fw-bold text-dark mb-2">Amok Fish</h1>
+          <div class="d-flex align-items-center gap-2 mb-4">
+            <div class="d-flex text-warning" id="rating-stars">
+              <span
+                class="material-symbols-outlined star-icon filled"
+                data-value="1"
+                >star</span
+              >
+              <span
+                class="material-symbols-outlined star-icon filled"
+                data-value="2"
+                >star</span
+              >
+              <span
+                class="material-symbols-outlined star-icon filled"
+                data-value="3"
+                >star</span
+              >
+              <span
+                class="material-symbols-outlined star-icon filled"
+                data-value="4"
+                >star</span
+              >
+              <span class="material-symbols-outlined star-icon" data-value="5"
+                >star</span
+              >
+            </div>
+            <span class="text-muted small">(48 Reviews)</span>
+          </div>
 
-<!-- footer -->
+          <!-- Mobile Image & Purchase Block -->
+          <div class="d-md-none mb-4">
+            <div
+              class="rounded-3 overflow-hidden shadow-lg border border-secondary-subtle mb-3"
+            >
+              <img
+                alt="Amok Fish"
+                class="w-100"
+                style="aspect-ratio: 4/3; object-fit: cover"
+                data-alt="A gourmet, close-up photograph of Cambodian Amok Fish served in a traditional banana leaf cup. The steaming yellow coconut curry is topped with vibrant red chili slivers and dark green kaffir lime leaves. The scene is lit with warm, natural sunlight, casting soft shadows on a rustic wooden table scattered with lemongrass and ginger. The overall aesthetic is earthy, rich, and high-end culinary photography."
+                src="https://malis.thalias.com.kh/wp-content/uploads/2024/08/New-Project-1-1.jpg"
+              />
+            </div>
+            <div class="bg-white p-3 rounded-3 border border-secondary-subtle">
+              <div
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                <span class="text-muted fw-semibold">Total Price:</span>
+                <h3 class="text-brand-orange fw-bold mb-0 total-price-value">
+                  $14.50
+                </h3>
+              </div>
+              <button
+                class="btn btn-add-to-card w-100 rounded-pill py-2 fw-bold"
+                onclick="showSuccessToast()"
+              >
+                Add to Card
+              </button>
+            </div>
+          </div>
+
+          <!-- Overview Chips -->
+          <div
+            class="row row-cols-3 g-0 bg-white p-3 rounded-3 border border-secondary-subtle mb-4"
+          >
+            <!-- Prep Time -->
+            <div class="d-flex flex-column align-items-center text-center col">
+              <span class="material-symbols-outlined text-brand-orange mb-1"
+                >schedule</span
+              >
+              <span class="small text-muted">Prep Time</span>
+              <span class="fw-bold text-brand-orange">15 min</span>
+            </div>
+
+            <!-- Cook Time -->
+            <div
+              class="d-flex flex-column align-items-center text-center col border-start border-end border-secondary-subtle"
+            >
+              <span class="material-symbols-outlined text-brand-orange mb-1"
+                >cooking</span
+              >
+              <span class="small text-muted">Cook Time</span>
+              <span class="fw-bold text-brand-orange">20 min</span>
+            </div>
+
+            <!-- Difficulty -->
+            <div class="d-flex flex-column align-items-center text-center col">
+              <span class="material-symbols-outlined text-brand-orange mb-1"
+                >restaurant_menu</span
+              >
+              <span class="small text-muted">Difficulty</span>
+              <span class="fw-bold text-brand-orange">Easy</span>
+            </div>
+          </div>
+          <p
+            class="text-secondary mb-3"
+            style="line-height: 1.6; font-size: 1.05rem"
+          >
+            The national dish of Cambodia. A creamy, lemongrass-scented fish
+            curry steamed in banana leaf cups. This kit brings the authentic
+            flavors of Phnom Penh directly to your kitchen with our
+            fresh-pounded Kroeung paste.
+          </p>
+          <a
+            href="https://www.youtube.com/watch?v=RoKdznkZ92k&list=RDRoKdznkZ92k&start_radio=1&autoplay=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline-brand rounded-pill px-4 py-2 fw-bold mb-4 d-inline-flex align-items-center gap-2"
+          >
+            <span class="material-symbols-outlined">play_circle</span>
+            How to Cook
+          </a>
+
+          <!-- Ingredients & Servings Container Card -->
+          <div
+            class="bg-white p-4 rounded-3 border border-secondary-subtle mb-4"
+          >
+            <!-- Ingredients Header & Servings Control -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h3 class="fw-bold mb-0 text-dark">Ingredients</h3>
+
+              <!-- Servings Counter -->
+              <div
+                class="d-flex align-items-center bg-white rounded-pill p-1 border border-secondary-subtle"
+              >
+                <button
+                  class="btn rounded-circle p-0 d-flex align-items-center justify-content-center btn-serving-control"
+                  style="width: 32px; height: 32px"
+                  onclick="updateServings(-1)"
+                >
+                  <span class="material-symbols-outlined fs-5">remove</span>
+                </button>
+                <span class="px-3 fw-bold text-brand-orange" id="serving-count"
+                  >2 Persons</span
+                >
+                <button
+                  class="btn rounded-circle p-0 d-flex align-items-center justify-content-center btn-serving-control"
+                  style="width: 32px; height: 32px"
+                  onclick="updateServings(1)"
+                >
+                  <span class="material-symbols-outlined fs-5">add</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Ingredients Grid -->
+            <div class="row row-cols-2 row-cols-sm-3 g-3" id="ingredients-grid">
+              <!-- Card 1: Fish Fillet -->
+              <div class="col">
+                <div
+                  class="card h-100 bg-white rounded-3 border border-secondary-subtle overflow-hidden d-flex flex-column ingredient-card shadow-sm"
+                >
+                  <div class="position-relative">
+                    <img
+                      alt="Fish Fillet"
+                      class="w-100"
+                      style="aspect-ratio: 16/9; object-fit: cover"
+                      src="https://static.vecteezy.com/system/resources/previews/011/216/113/large_2x/fish-fillet-on-wooden-board-with-ingredients-for-cooking-fresh-raw-pangasius-fish-fillet-with-herb-and-spices-black-pepper-lemon-lime-meat-dolly-fish-tilapia-striped-catfish-free-photo.JPG"
+                    />
+                  </div>
+                  <div
+                    class="p-3 d-flex justify-content-between align-items-center"
+                  >
+                    <span class="fw-bold text-dark mb-0">Fish Fillet</span>
+                    <span
+                      class="text-brand-orange fw-bold ingredient-qty mb-0 border border-secondary-subtle px-2 py-1 rounded bg-light"
+                      data-base="150"
+                      id="ingredient-qty-fish-1"
+                      style="font-size: 0.9rem"
+                      >300g</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2: Fish Fillet -->
+              <div class="col">
+                <div
+                  class="card h-100 bg-white rounded-3 border border-secondary-subtle overflow-hidden d-flex flex-column ingredient-card shadow-sm"
+                >
+                  <div class="position-relative">
+                    <img
+                      alt="Fish Fillet"
+                      class="w-100"
+                      style="aspect-ratio: 16/9; object-fit: cover"
+                      src="https://static.vecteezy.com/system/resources/previews/011/216/113/large_2x/fish-fillet-on-wooden-board-with-ingredients-for-cooking-fresh-raw-pangasius-fish-fillet-with-herb-and-spices-black-pepper-lemon-lime-meat-dolly-fish-tilapia-striped-catfish-free-photo.JPG"
+                    />
+                  </div>
+                  <div
+                    class="p-3 d-flex justify-content-between align-items-center"
+                  >
+                    <span class="fw-bold text-dark mb-0">Fish Fillet</span>
+                    <span
+                      class="text-brand-orange fw-bold ingredient-qty mb-0 border border-secondary-subtle px-2 py-1 rounded bg-light"
+                      data-base="150"
+                      id="ingredient-qty-fish-2"
+                      style="font-size: 0.9rem"
+                      >300g</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3: Fish Fillet -->
+              <div class="col">
+                <div
+                  class="card h-100 bg-white rounded-3 border border-secondary-subtle overflow-hidden d-flex flex-column ingredient-card shadow-sm"
+                >
+                  <div class="position-relative">
+                    <img
+                      alt="Fish Fillet"
+                      class="w-100"
+                      style="aspect-ratio: 16/9; object-fit: cover"
+                      src="https://static.vecteezy.com/system/resources/previews/011/216/113/large_2x/fish-fillet-on-wooden-board-with-ingredients-for-cooking-fresh-raw-pangasius-fish-fillet-with-herb-and-spices-black-pepper-lemon-lime-meat-dolly-fish-tilapia-striped-catfish-free-photo.JPG"
+                    />
+                  </div>
+                  <div
+                    class="p-3 d-flex justify-content-between align-items-center"
+                  >
+                    <span class="fw-bold text-dark mb-0">Fish Fillet</span>
+                    <span
+                      class="text-brand-orange fw-bold ingredient-qty mb-0 border border-secondary-subtle px-2 py-1 rounded bg-light"
+                      data-base="150"
+                      id="ingredient-qty-fish-3"
+                      style="font-size: 0.9rem"
+                      >300g</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 4: Fish Fillet -->
+              <div class="col">
+                <div
+                  class="card h-100 bg-white rounded-3 border border-secondary-subtle overflow-hidden d-flex flex-column ingredient-card shadow-sm"
+                >
+                  <div class="position-relative">
+                    <img
+                      alt="Fish Fillet"
+                      class="w-100"
+                      style="aspect-ratio: 16/9; object-fit: cover"
+                      src="https://static.vecteezy.com/system/resources/previews/011/216/113/large_2x/fish-fillet-on-wooden-board-with-ingredients-for-cooking-fresh-raw-pangasius-fish-fillet-with-herb-and-spices-black-pepper-lemon-lime-meat-dolly-fish-tilapia-striped-catfish-free-photo.JPG"
+                    />
+                  </div>
+                  <div
+                    class="p-3 d-flex justify-content-between align-items-center"
+                  >
+                    <span class="fw-bold text-dark mb-0">Fish Fillet</span>
+                    <span
+                      class="text-brand-orange fw-bold ingredient-qty mb-0 border border-secondary-subtle px-2 py-1 rounded bg-light"
+                      data-base="150"
+                      id="ingredient-qty-fish-4"
+                      style="font-size: 0.9rem"
+                      >300g</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 5: Fish Fillet -->
+              <div class="col">
+                <div
+                  class="card h-100 bg-white rounded-3 border border-secondary-subtle overflow-hidden d-flex flex-column ingredient-card shadow-sm"
+                >
+                  <div class="position-relative">
+                    <img
+                      alt="Fish Fillet"
+                      class="w-100"
+                      style="aspect-ratio: 16/9; object-fit: cover"
+                      src="https://static.vecteezy.com/system/resources/previews/011/216/113/large_2x/fish-fillet-on-wooden-board-with-ingredients-for-cooking-fresh-raw-pangasius-fish-fillet-with-herb-and-spices-black-pepper-lemon-lime-meat-dolly-fish-tilapia-striped-catfish-free-photo.JPG"
+                    />
+                  </div>
+                  <div
+                    class="p-3 d-flex justify-content-between align-items-center"
+                  >
+                    <span class="fw-bold text-dark mb-0">Fish Fillet</span>
+                    <span
+                      class="text-brand-orange fw-bold ingredient-qty mb-0 border border-secondary-subtle px-2 py-1 rounded bg-light"
+                      data-base="150"
+                      id="ingredient-qty-fish-5"
+                      style="font-size: 0.9rem"
+                      >300g</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Image and Pricing on Desktop/Tablet (visible on md and up) -->
+        <div class="col-md-5 col-lg-4 d-none d-md-block">
+          <div
+            class="rounded-3 overflow-hidden shadow-lg border border-secondary-subtle mb-3"
+          >
+            <img
+              alt="Amok Fish"
+              class="w-100"
+              style="aspect-ratio: 4/3; object-fit: cover"
+              data-alt="A gourmet, close-up photograph of Cambodian Amok Fish served in a traditional banana leaf cup. The steaming yellow coconut curry is topped with vibrant red chili slivers and dark green kaffir lime leaves. The scene is lit with warm, natural sunlight, casting soft shadows on a rustic wooden table scattered with lemongrass and ginger. The overall aesthetic is earthy, rich, and high-end culinary photography."
+              src="https://malis.thalias.com.kh/wp-content/uploads/2024/08/New-Project-1-1.jpg"
+            />
+          </div>
+          <div class="bg-white p-3 rounded-3 border border-secondary-subtle">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="text-muted fw-semibold">Total Price:</span>
+              <h3 class="text-brand-orange fw-bold mb-0 total-price-value">
+                $14.50
+              </h3>
+            </div>
+            <button
+              class="btn btn-add-to-card w-100 rounded-pill py-2 fw-bold"
+              onclick="showSuccessToast()"
+            >
+              Add to Card
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- footer -->
     <div id="footer"></div>
     <!-- bootstrap JS -->
     <script
@@ -42,7 +474,67 @@
       }
 
       loadComponent("components/footer.html", "footer");
-      loadComponent("components/nav.html", "navbar");
+      loadComponent("components/nav_no_search.html", "navbar");
     </script>
-</body>
+
+    <!-- Rating Interactivity Script -->
+    <script>
+      const stars = document.querySelectorAll("#rating-stars .star-icon");
+      stars.forEach((star) => {
+        star.addEventListener("click", () => {
+          const rating = parseInt(star.getAttribute("data-value"));
+          stars.forEach((s, idx) => {
+            if (idx < rating) {
+              s.classList.add("filled");
+            } else {
+              s.classList.remove("filled");
+            }
+          });
+        });
+      });
+    </script>
+    <!-- Toast Notification -->
+    <div id="success-toast" class="toast-notification">
+      <span class="material-symbols-outlined">check_circle</span>
+      Added successfully!
+    </div>
+
+    <!-- Toast Script -->
+    <script>
+      function showSuccessToast() {
+        const toast = document.getElementById("success-toast");
+        toast.classList.add("show");
+        setTimeout(() => {
+          toast.classList.remove("show");
+        }, 3000);
+      }
+    </script>
+
+    <!-- Servings Interactivity Script -->
+    <script>
+      let servings = 2;
+      const basePricePerPerson = 7.25;
+
+      function updateServings(change) {
+        servings = Math.max(1, servings + change);
+        document.getElementById("serving-count").textContent =
+          `${servings} Persons`;
+
+        // Dynamically update all ingredient quantities
+        const ingredientQties = document.querySelectorAll(".ingredient-qty");
+        ingredientQties.forEach((el) => {
+          const baseQty = parseFloat(el.getAttribute("data-base"));
+          const unit = el.textContent.replace(/[0-9.]/g, ""); // Extract unit (e.g., 'g', 'ml')
+          el.textContent = `${baseQty * servings}${unit}`;
+        });
+
+        // Dynamically update total price values
+        const totalPrice = (servings * basePricePerPerson).toFixed(2);
+        const priceElements = document.querySelectorAll(".total-price-value");
+        priceElements.forEach((el) => {
+          el.textContent = `$${totalPrice}`;
+        });
+      }
+    </script>
+  </body>
 </html>
