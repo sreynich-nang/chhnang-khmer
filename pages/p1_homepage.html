@@ -11,6 +11,11 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <!-- google-icons -->
     <link
       rel="stylesheet"
@@ -35,6 +40,51 @@
       .category-card-section2:hover .rounded-circle {
         background-color: #e67e22 !important;
         color: #fff !important;
+      }
+      .meal-card-section3 {
+        transition: all 0.3s ease;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      .meal-card-section3:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12) !important;
+      }
+      .meal-card-section3 .card-img-wrapper {
+        overflow: hidden;
+        position: relative;
+      }
+      .meal-card-section3 img {
+        transition: transform 0.5s ease;
+        height: 220px;
+        object-fit: cover;
+        width: 100%;
+      }
+      .meal-card-section3:hover img {
+        transform: scale(1.06);
+      }
+      /* Swiper styles */
+      .swiper {
+        width: 100%;
+        padding-bottom: 50px !important;
+      }
+      .swiper-slide {
+        height: auto;
+      }
+      .swiper-pagination-bullet-active {
+        background-color: #e67e22 !important;
+      }
+      .btn-add-section3 {
+        background-color: #fed65b;
+        color: #212529;
+        border: 1px solid #fed65b;
+        transition: all 0.2s ease;
+      }
+      .btn-add-section3:hover {
+        background-color: #e67e22;
+        border-color: #e67e22;
+        color: #fff;
+        transform: scale(1.05);
       }
     </style>
   </head>
@@ -185,32 +235,234 @@
       </div>
     </section>
 
-<!-- section poipular recipe -->
+    <!-- section poipular recipe -->
     <section class="py-5 bg-light">
-        <div class="container">
-            <div class="d-flex justify-content-between align-items-end mb-5">
-                <div>
-                    <small class="text-warning text-uppercase fw-bold">
-                    Our Favorite Menu
-                    </small>
-                    <h2 class="fw-bold">Popular Recipe Kits</h2>
-                </div>
+      <div class="container">
+        <!-- section3-header -->
+        <div class="d-flex justify-content-between align-items-end mb-5">
+          <div>
+            <small class="text-warning text-uppercase fw-bold">
+              Our Favorite Menu
+            </small>
+            <h2 class="fw-bold">Popular Recipe Kits</h2>
+          </div>
 
-                <button
-                  class="btn btn-outline-dark d-none d-md-block fw-bold"
-                  style="color: #555555; border-color: #555555; background-color: transparent; transition: all 0.3s ease;"
-                  onmouseover="this.style.color='#e67e22'; this.style.borderColor='#e67e22';"
-                  onmouseout="this.style.color='#555555'; this.style.borderColor='#555555';"
-                >
-                    View All Menu →
-                </button>
-            </div>
+          <button
+            class="btn btn-outline-dark fw-bold"
+            style="
+              color: #555555;
+              border-color: #555555;
+              background-color: transparent;
+              transition: all 0.3s ease;
+            "
+            onmouseover="
+              this.style.color = '#e67e22';
+              this.style.borderColor = '#e67e22';
+            "
+            onmouseout="
+              this.style.color = '#555555';
+              this.style.borderColor = '#555555';
+            "
+          >
+            View All Menu →
+          </button>
         </div>
-    </section>
+        <!-- Swiper Container -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <!-- card1 -->
+            <div class="swiper-slide">
+              <div class="card meal-card-section3 h-100 border-0 shadow-sm">
+                <div class="card-img-wrapper">
+                  <img
+                    src="https://malis.thalias.com.kh/wp-content/uploads/2024/08/New-Project-1-1.jpg"
+                    class="card-img-top"
+                    alt="Amok Fish"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <div class="flex-grow-1">
+                    <div class="mb-2">
+                      <span class="badge bg-warning text-dark">
+                        Signature
+                      </span>
+                      <span class="badge bg-secondary"> 35 Mins </span>
+                    </div>
+                    <h4 class="fw-bold mt-2">Amok Fish</h4>
+                    <p class="text-muted small">
+                      Creamy coconut curry steamed in banana leaves.
+                    </p>
+                  </div>
+                  <div
+                    class="mt-3 pt-2 border-top d-flex justify-content-between align-items-center"
+                  >
+                    <h5 class="text-warning fw-bold mb-0">$14.50</h5>
+                    <button
+                      class="btn btn-sm rounded-pill px-3 fw-semibold btn-add-section3"
+                      onclick="window.location.href = 'p3_detailpage.html'"
+                    >
+                      Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
 
+            <!-- card2 -->
+            <div class="swiper-slide">
+              <div class="card meal-card-section3 h-100 border-0 shadow-sm">
+                <div class="card-img-wrapper">
+                  <img
+                    src="https://malis.thalias.com.kh/wp-content/uploads/2024/07/DST_6265-1-921x1024.jpg"
+                    class="card-img-top"
+                    alt="Lok Lak"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <div class="flex-grow-1">
+                    <div class="mb-2">
+                      <span class="badge bg-warning text-dark">
+                        Signature
+                      </span>
+                      <span class="badge bg-secondary"> 35 Mins </span>
+                    </div>
+                    <h4 class="fw-bold mt-2">Lok Lak</h4>
+                    <p class="text-muted small">
+                      Sizzling beef with lime-pepper dip.
+                    </p>
+                  </div>
+                  <div
+                    class="mt-3 pt-2 border-top d-flex justify-content-between align-items-center"
+                  >
+                    <h5 class="text-warning fw-bold mb-0">$12.00</h5>
+                    <button
+                      class="btn btn-sm rounded-pill px-3 fw-semibold btn-add-section3"
+                      onclick="window.location.href = 'p3_detailpage.html'"
+                    >
+                      Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- card3 -->
+            <div class="swiper-slide">
+              <div class="card meal-card-section3 h-100 border-0 shadow-sm">
+                <div class="card-img-wrapper">
+                  <img
+                    src="https://malis.thalias.com.kh/wp-content/uploads/2024/07/DST_4752-1536x1025.jpg"
+                    class="card-img-top"
+                    alt="Kuy Teav"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <div class="flex-grow-1">
+                    <div class="mb-2">
+                      <span class="badge bg-light text-dark"> Soup </span>
+                      <span class="badge bg-secondary"> 25 Mins </span>
+                    </div>
+                    <h4 class="fw-bold mt-2">Kuy Teav</h4>
+                    <p class="text-muted small">
+                      Traditional rice noodle soup.
+                    </p>
+                  </div>
+                  <div
+                    class="mt-3 pt-2 border-top d-flex justify-content-between align-items-center"
+                  >
+                    <h5 class="text-warning fw-bold mb-0">$8.50</h5>
+                    <button
+                      class="btn btn-sm rounded-pill px-3 fw-semibold btn-add-section3"
+                      onclick="window.location.href = 'p3_detailpage.html'"
+                    >
+                      Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- card4 -->
+            <div class="swiper-slide">
+              <div class="card meal-card-section3 h-100 border-0 shadow-sm">
+                <div class="card-img-wrapper">
+                  <img
+                    src="https://malis.thalias.com.kh/wp-content/uploads/elementor/thumbs/1_MalisPP_a-rln6rqsv6feh7tgci62gl43rcilqqi2zwg1bzdb5ag.jpg"
+                    class="card-img-top"
+                    alt="Beef Sour Soup"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <div class="flex-grow-1">
+                    <div class="mb-2">
+                      <span class="badge bg-light text-dark"> Soup </span>
+                      <span class="badge bg-secondary"> 40 Mins </span>
+                    </div>
+                    <h4 class="fw-bold mt-2">Beef Sour Soup</h4>
+                    <p class="text-muted small">
+                      Herbal broth with morning glory.
+                    </p>
+                  </div>
+                  <div
+                    class="mt-3 pt-2 border-top d-flex justify-content-between align-items-center"
+                  >
+                    <h5 class="text-warning fw-bold mb-0">$11.25</h5>
+                    <button
+                      class="btn btn-sm rounded-pill px-3 fw-semibold btn-add-section3"
+                      onclick="window.location.href = 'p3_detailpage.html'"
+                    >
+                      Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- pagination dots -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
 
     <!-- footer -->
     <div id="footer"></div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      // Initialize Swiper (our sliding cards tool)
+      const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1, // 1 card at a time on mobile
+        spaceBetween: 25, // space between cards in pixels
+        loop: true, // keep repeat cards in a loop forever
+        speed: 2000, // timer
+
+        // Slide automatically
+        autoplay: {
+          delay: 2500, // Slide to the next card every 2.5 seconds (2500ms)
+          disableOnInteraction: false, // Keep sliding even if user clicks a card
+        },
+
+        // Navigation dots at the bottom
+        pagination: {
+          el: ".swiper-pagination", // Connects to the dots element
+          clickable: true, // Lets user click the dots to switch cards
+        },
+
+        // Show more cards on bigger screens
+        breakpoints: {
+          768: {
+            slidesPerView: 2, // Show 2 cards on tablets
+          },
+          992: {
+            slidesPerView: 3, // Show 3 cards on desktop
+          },
+        },
+      });
+    </script>
 
     <!-- bootstrap JS -->
     <script
