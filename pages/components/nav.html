@@ -38,13 +38,19 @@
 <nav class="shadow-sm bg-light fixed-top">
   <div class="container">
     <div class="d-flex justify-content-between align-items-center py-3">
-      <h3 class="fw-bold mb-0" onclick="window.location.pathname.includes('/pages/') ? window.location.href = '../index.html' : window.location.href = 'index.html'">Chhnang Khmer</h3>
+      <h3
+        class="fw-bold mb-0"
+        onclick="
+          window.location.pathname.includes('/pages/')
+            ? (window.location.href = '../index.html')
+            : (window.location.href = 'index.html')
+        "
+      >
+        Chhnang Khmer
+      </h3>
 
       <!-- search -->
-      <div
-        class="d-none d-md-block flex-grow-1 mx-4"
-        style="max-width: 500px"
-      >
+      <div class="d-none d-md-block flex-grow-1 mx-4" style="max-width: 500px">
         <div class="position-relative">
           <input
             type="text"
