@@ -1,12 +1,12 @@
 <!-- footer -->
-<footer class="w-100 pt-3 pb-0">
+<footer class="w-100 pt-4 pb-0">
   <div class="container">
     <!-- FLEX CONTAINER -->
     <div
       class="d-flex flex-column flex-md-row justify-content-between gap-4 text-center text-md-start"
     >
       <!-- Brand -->
-      <div style="flex: 2">
+      <div style="flex: 1.5">
         <h3 class="fw-bold mb-3 fs-4 font-title">Chhnang Khmer</h3>
         <p class="text-muted mb-0">
           Bringing the heart of Cambodian kitchens to your doorstep. We provide
@@ -18,43 +18,64 @@
       <div class="d-flex flex-column gap-2" style="flex: 1">
         <h3 class="text-uppercase fw-bold fs-4 mb-3 font-title">Quick Links</h3>
 
-        <a href="#" class="text-muted text-decoration-none hover-link"
+        <a href="p2_viewall.html" class="text-muted text-decoration-none hover-link"
           >Recipes</a
         >
-        <a href="#" class="text-muted text-decoration-none hover-link"
+        <a href="p1_homepage.html" class="text-muted text-decoration-none hover-link"
           >About Us</a
         >
-        <a href="#" class="text-muted text-decoration-none hover-link"
-          >Contact Info</a
+        <a href="p6_trackorder.html" class="text-muted text-decoration-none hover-link"
+          >Track Order</a
         >
       </div>
 
-      <!-- Social / Newsletter -->
-      <div style="flex: 1">
+      <!-- Newsletter / Subscription Form -->
+      <div style="flex: 1.5">
         <h3 class="text-uppercase fw-bold fs-4 mb-3 font-title">Connect Us</h3>
+        <p class="text-muted small mb-3">
+          Subscribe to receive fresh Cambodian recipes & weekly kit discounts.
+        </p>
+        
+        <form onsubmit="event.preventDefault(); alert('Thank you for subscribing!');" class="d-flex flex-column flex-sm-row gap-2">
+          <input
+            type="email"
+            class="form-control rounded-pill px-3 py-2 border-secondary-subtle"
+            placeholder="Enter your email"
+            aria-label="Email address for newsletter subscription"
+            required
+          />
+          <button
+            type="submit"
+            class="btn rounded-pill px-4 fw-bold text-nowrap btn-brand-orange"
+          >
+            Subscribe Here
+          </button>
+        </form>
 
         <div
-          class="d-flex justify-content-center justify-content-md-start gap-3 mb-3"
+          class="d-flex justify-content-center justify-content-md-start gap-3 mt-3"
         >
           <button
             class="btn btn-outline-secondary rounded-circle d-flex align-items-center justify-content-center"
-            style="width: 40px; height: 40px"
+            style="width: 36px; height: 36px"
+            title="Share"
           >
-            <span class="material-symbols-outlined">share</span>
+            <span class="material-symbols-outlined fs-6">share</span>
           </button>
 
           <button
             class="btn btn-outline-secondary rounded-circle d-flex align-items-center justify-content-center"
-            style="width: 40px; height: 40px"
+            style="width: 36px; height: 36px"
+            title="Contact Us"
           >
-            <span class="material-symbols-outlined">mail</span>
+            <span class="material-symbols-outlined fs-6">mail</span>
           </button>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- compyright banner -->
+  <!-- Copyright banner -->
   <div
     class="w-100 py-3 mt-4 text-center text-white bg-brand-orange"
   >
