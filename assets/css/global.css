@@ -27,7 +27,7 @@
   --font-size-3xl: 32px;
 }
 
-/* Base Reset & Core Layout */
+/* Core Layout */
 body, input, button, select, textarea {
   font-family: var(--font-primary);
 }
@@ -77,9 +77,7 @@ h1, h2, h3, h4, h5, h6, .font-title, .display-1, .display-2, .display-3, .displa
   color: #ffffff !important;
 }
 
-/* ==========================================
-   Global Navbar Component
-   ========================================== */
+/* nav */
 nav.fixed-top {
   transition: all 0.3s ease;
 }
@@ -120,9 +118,7 @@ nav.fixed-top .btn-outline-secondary:active {
   transform: translateY(0);
 }
 
-/* ==========================================
-   Global Footer Component
-   ========================================== */
+/* footer */
 footer h3,
 footer .font-title,
 footer p.fs-4 {
