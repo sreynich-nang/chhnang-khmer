@@ -177,6 +177,8 @@
    ========================================== */
 .p5-form-control,
 .p5-form-select {
+  width: 100%;
+  display: block;
   padding: 12px 16px;
   border-radius: 10px;
   border: 1px solid #dee2e6;
