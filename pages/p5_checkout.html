@@ -16,104 +16,9 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-      body {
-        background-color: #fbfaee;
-        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        padding-top: 85px; /* Offset for the fixed-top navbar */
-      }
-      .font-title {
-        font-family: 'Outfit', sans-serif;
-      }
-      .text-brand-orange {
-        color: #e67e22 !important;
-      }
-      .btn-brand-orange {
-        background-color: #fed65b;
-        color: #212529;
-        border: 1px solid #fed65b;
-        transition: all 0.2s ease;
-      }
-      .btn-brand-orange:hover {
-        background-color: #e67e22;
-        border-color: #e67e22;
-        color: #fff;
-      }
-      
-      /* Input styles */
-      .form-control, .form-select {
-        padding: 0.75rem 1rem;
-        border-radius: 10px;
-        border: 1px solid #dee2e6;
-        background-color: #f9f9f6;
-        font-size: 0.95rem;
-        transition: all 0.2s ease-in-out;
-      }
-      .form-control:focus, .form-select:focus {
-        background-color: #fff;
-        border-color: #e67e22;
-        box-shadow: 0 0 0 0.25rem rgba(230, 126, 34, 0.15);
-      }
-      
-      /* Payment Method Card styling */
-      .payment-card {
-        border: 2px solid #dee2e6;
-        border-radius: 12px;
-        transition: all 0.2s ease-in-out;
-        background-color: #fff;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-      }
-      .payment-card:hover {
-        background-color: #f8f9fa;
-        border-color: #ced4da;
-        transform: translateY(-2px);
-      }
-      .btn-check:checked + .payment-card {
-        border-color: #e67e22 !important;
-        background-color: rgba(230, 126, 34, 0.05);
-        box-shadow: 0 4px 12px rgba(230, 126, 34, 0.12);
-      }
-      
-      /* Order Summary styling */
-      .summary-box {
-        background-color: #5d4037; /* Clay Brown */
-        color: #ffffff;
-        border-radius: 16px;
-        padding: 1.5rem;
-        box-shadow: 0 10px 25px rgba(93, 64, 55, 0.15);
-      }
-      .summary-box h3 {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        padding-bottom: 0.75rem;
-      }
-      .summary-box .opacity-80 {
-        opacity: 0.85;
-      }
-      .btn-place-order {
-        background-color: #fed65b; /* Brand Yellow */
-        color: #212529;
-        font-weight: 700;
-        border: none;
-        border-radius: 50px;
-        padding: 0.75rem 1.5rem;
-        transition: all 0.2s ease-in-out;
-      }
-      .btn-place-order:hover {
-        background-color: #f7c324;
-        color: #000;
-        transform: translateY(-2px);
-      }
-      .btn-place-order:active {
-        transform: translateY(0);
-      }
-    </style>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
 
   <body>
@@ -138,23 +43,23 @@
             <div class="row g-3">
               <div class="col-md-6">
                 <label class="form-label fw-semibold text-secondary-emphasis small mb-1">Full Name</label>
-                <input class="form-control" placeholder="Adira" type="text">
+                <input class="p5-form-control" placeholder="Adira" type="text">
               </div>
               <div class="col-md-6">
                 <label class="form-label fw-semibold text-secondary-emphasis small mb-1">Phone Number</label>
-                <input class="form-control" placeholder="+855 xx xxx xxx" type="tel">
+                <input class="p5-form-control" placeholder="+855 xx xxx xxx" type="tel">
               </div>
               <div class="col-12">
                 <label class="form-label fw-semibold text-secondary-emphasis small mb-1">Delivery Address</label>
-                <input class="form-control" placeholder="House #123, St 456, Boeung Keng Kang I, Phnom Penh" type="text">
+                <input class="p5-form-control" placeholder="House #123, St 456, Boeung Keng Kang I, Phnom Penh" type="text">
               </div>
               <div class="col-md-6">
                 <label class="form-label fw-semibold text-secondary-emphasis small mb-1">Delivery Date</label>
-                <input class="form-control" type="date">
+                <input class="p5-form-control" type="date">
               </div>
               <div class="col-md-6">
                 <label class="form-label fw-semibold text-secondary-emphasis small mb-1">Delivery Time</label>
-                <select class="form-select">
+                <select class="p5-form-select">
                   <option>09:00 AM - 11:00 AM</option>
                   <option>11:00 AM - 01:00 PM</option>
                   <option>01:00 PM - 03:00 PM</option>
@@ -173,8 +78,8 @@
             <div class="row g-3">
               <!-- ABA -->
               <div class="col-4">
-                <input type="radio" class="btn-check" name="payment" id="payment-aba" checked>
-                <label class="card p-3 text-center payment-card border-2 transition-all" for="payment-aba">
+                <input type="radio" class="btn-check" name="payment" id="payment-aba">
+                <label class="card p-3 text-center p5-payment-card border-2 transition-all" for="payment-aba">
                   <div class="d-flex flex-column align-items-center justify-content-center w-100">
                     <div class="logo-wrapper mb-2">
                       <img src="../assets/images/aba.png" alt="ABA Pay" class="payment-logo rounded-circle" style="width: 48px; height: 48px; object-fit: cover;">
@@ -187,7 +92,7 @@
               <!-- ACLEDA -->
               <div class="col-4">
                 <input type="radio" class="btn-check" name="payment" id="payment-acleda">
-                <label class="card p-3 text-center payment-card border-2 transition-all" for="payment-acleda">
+                <label class="card p-3 text-center p5-payment-card border-2 transition-all" for="payment-acleda">
                   <div class="d-flex flex-column align-items-center justify-content-center w-100">
                     <div class="logo-wrapper mb-2">
                       <img src="../assets/images/aclida.png" alt="ACLEDA" class="payment-logo rounded-circle" style="width: 48px; height: 48px; object-fit: cover;">
@@ -200,7 +105,7 @@
               <!-- Wing -->
               <div class="col-4">
                 <input type="radio" class="btn-check" name="payment" id="payment-wing">
-                <label class="card p-3 text-center payment-card border-2 transition-all" for="payment-wing">
+                <label class="card p-3 text-center p5-payment-card border-2 transition-all" for="payment-wing">
                   <div class="d-flex flex-column align-items-center justify-content-center w-100">
                     <div class="logo-wrapper mb-2">
                       <img src="../assets/images/wing.png" alt="Wing" class="payment-logo rounded-circle" style="width: 48px; height: 48px; object-fit: cover;">
@@ -215,7 +120,7 @@
 
         <!-- Right Column: Order Summary -->
         <aside class="col-lg-4 sticky-top" style="top: 100px;">
-          <div class="summary-box">
+          <div class="p5-summary-box">
             <h3 class="h4 fw-bold mb-3 font-title">Order Summary</h3>
             <div class="d-flex flex-column gap-3 mb-4">
               
@@ -252,7 +157,7 @@
               <span class="h4 fw-bold text-warning mb-0">$31.50</span>
             </div>
             
-            <button class="btn btn-place-order w-100 py-3 d-flex align-items-center justify-content-center gap-2" onclick="simulateOrder()">
+            <button class="btn p5-btn-place-order w-100 py-3 d-flex align-items-center justify-content-center gap-2" onclick="simulateOrder()">
               <span>Place Order</span>
               <span class="material-symbols-outlined">arrow_forward</span>
             </button>

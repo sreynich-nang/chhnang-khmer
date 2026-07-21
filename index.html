@@ -21,72 +21,9 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     />
-    <style>
-      body {
-        background-color: #fbfaee;
-        padding-top: 85px; /* Offset for the fixed-top navbar */
-      }
-      .category-card-section2 {
-        transition: all 0.3s ease;
-        cursor: pointer;
-      }
-      .category-card-section2:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
-      }
-      .category-card-section2 .rounded-circle {
-        transition: all 0.3s ease;
-      }
-      .category-card-section2:hover .rounded-circle {
-        background-color: #e67e22 !important;
-        color: #fff !important;
-      }
-      .meal-card-section3 {
-        transition: all 0.3s ease;
-        border-radius: 12px;
-        overflow: hidden;
-      }
-      .meal-card-section3:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12) !important;
-      }
-      .meal-card-section3 .card-img-wrapper {
-        overflow: hidden;
-        position: relative;
-      }
-      .meal-card-section3 img {
-        transition: transform 0.5s ease;
-        height: 220px;
-        object-fit: cover;
-        width: 100%;
-      }
-      .meal-card-section3:hover img {
-        transform: scale(1.06);
-      }
-      /* Swiper styles */
-      .swiper {
-        width: 100%;
-        padding-bottom: 50px !important;
-      }
-      .swiper-slide {
-        height: auto;
-      }
-      .swiper-pagination-bullet-active {
-        background-color: #e67e22 !important;
-      }
-      .btn-add-section3 {
-        background-color: #fed65b;
-        color: #212529;
-        border: 1px solid #fed65b;
-        transition: all 0.2s ease;
-      }
-      .btn-add-section3:hover {
-        background-color: #e67e22;
-        border-color: #e67e22;
-        color: #fff;
-        transform: scale(1.05);
-      }
-    </style>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
 
   <body>
@@ -161,7 +98,7 @@
           <!-- Breakfast -->
           <div class="col-6 col-md-3">
             <div
-              class="card text-center shadow-sm border-0 h-100 category-card-section2"
+              class="card text-center shadow-sm border-0 h-100 p1-category-card"
             >
               <div class="card-body">
                 <div
@@ -180,7 +117,7 @@
           <!-- Lunch -->
           <div class="col-6 col-md-3">
             <div
-              class="card text-center shadow-sm border-0 h-100 category-card-section2"
+              class="card text-center shadow-sm border-0 h-100 p1-category-card"
             >
               <div class="card-body">
                 <div
@@ -199,7 +136,7 @@
           <!-- Dinner -->
           <div class="col-6 col-md-3">
             <div
-              class="card text-center shadow-sm border-0 h-100 category-card-section2"
+              class="card text-center shadow-sm border-0 h-100 p1-category-card"
             >
               <div class="card-body">
                 <div
@@ -218,7 +155,7 @@
           <!-- Dessert -->
           <div class="col-6 col-md-3">
             <div
-              class="card text-center shadow-sm border-0 h-100 category-card-section2"
+              class="card text-center shadow-sm border-0 h-100 p1-category-card"
             >
               <div class="card-body">
                 <div
@@ -272,7 +209,7 @@
           <div class="swiper-wrapper">
             <!-- card1 -->
             <div class="swiper-slide">
-              <div class="card meal-card-section3 h-100 border-0 shadow-sm">
+              <div class="card p1-meal-card h-100 border-0 shadow-sm">
                 <div class="card-img-wrapper">
                   <img
                     src="https://malis.thalias.com.kh/wp-content/uploads/2024/08/New-Project-1-1.jpg"
@@ -298,7 +235,7 @@
                   >
                     <h5 class="text-warning fw-bold mb-0">$14.50</h5>
                     <button
-                      class="btn btn-sm rounded-pill px-3 fw-semibold btn-add-section3"
+                      class="btn btn-sm rounded-pill px-3 fw-semibold p1-btn-add"
                       onclick="window.location.href = 'pages/p3_detailpage.html'"
                     >
                       Add
@@ -310,7 +247,7 @@
 
             <!-- card2 -->
             <div class="swiper-slide">
-              <div class="card meal-card-section3 h-100 border-0 shadow-sm">
+              <div class="card p1-meal-card h-100 border-0 shadow-sm">
                 <div class="card-img-wrapper">
                   <img
                     src="https://malis.thalias.com.kh/wp-content/uploads/2024/07/DST_6265-1-921x1024.jpg"
@@ -336,7 +273,7 @@
                   >
                     <h5 class="text-warning fw-bold mb-0">$12.00</h5>
                     <button
-                      class="btn btn-sm rounded-pill px-3 fw-semibold btn-add-section3"
+                      class="btn btn-sm rounded-pill px-3 fw-semibold p1-btn-add"
                       onclick="window.location.href = 'pages/p3_detailpage.html'"
                     >
                       Add
@@ -348,7 +285,7 @@
 
             <!-- card3 -->
             <div class="swiper-slide">
-              <div class="card meal-card-section3 h-100 border-0 shadow-sm">
+              <div class="card p1-meal-card h-100 border-0 shadow-sm">
                 <div class="card-img-wrapper">
                   <img
                     src="https://malis.thalias.com.kh/wp-content/uploads/2024/07/DST_4752-1536x1025.jpg"
@@ -371,7 +308,7 @@
                   >
                     <h5 class="text-warning fw-bold mb-0">$8.50</h5>
                     <button
-                      class="btn btn-sm rounded-pill px-3 fw-semibold btn-add-section3"
+                      class="btn btn-sm rounded-pill px-3 fw-semibold p1-btn-add"
                       onclick="window.location.href = 'pages/p3_detailpage.html'"
                     >
                       Add
@@ -383,7 +320,7 @@
 
             <!-- card4 -->
             <div class="swiper-slide">
-              <div class="card meal-card-section3 h-100 border-0 shadow-sm">
+              <div class="card p1-meal-card h-100 border-0 shadow-sm">
                 <div class="card-img-wrapper">
                   <img
                     src="https://malis.thalias.com.kh/wp-content/uploads/elementor/thumbs/1_MalisPP_a-rln6rqsv6feh7tgci62gl43rcilqqi2zwg1bzdb5ag.jpg"
@@ -406,7 +343,7 @@
                   >
                     <h5 class="text-warning fw-bold mb-0">$11.25</h5>
                     <button
-                      class="btn btn-sm rounded-pill px-3 fw-semibold btn-add-section3"
+                      class="btn btn-sm rounded-pill px-3 fw-semibold p1-btn-add"
                       onclick="window.location.href = 'pages/p3_detailpage.html'"
                     >
                       Add
@@ -440,7 +377,7 @@
 
         // Slide automatically
         autoplay: {
-          delay: 2500, // Slide to the next card every 2.5 seconds (2500ms)
+          delay: 2500, // timer
           disableOnInteraction: false, // Keep sliding even if user clicks a card
         },
 

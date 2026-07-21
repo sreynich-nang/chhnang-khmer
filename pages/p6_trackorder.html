@@ -16,48 +16,9 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-      body {
-        background-color: #fbfaee;
-        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        padding-top: 85px; /* Offset for the fixed-top navbar */
-      }
-      .font-title {
-        font-family: 'Outfit', sans-serif;
-      }
-      .text-brand-orange {
-        color: #e67e22 !important;
-      }
-      .btn-brand-orange {
-        background-color: #fed65b;
-        color: #212529;
-        border: 1px solid #fed65b;
-        transition: all 0.2s ease;
-      }
-      .btn-brand-orange:hover {
-        background-color: #e67e22;
-        border-color: #e67e22;
-        color: #fff;
-      }
-      
-      @keyframes pulse {
-        0%, 100% {
-          transform: scale(1);
-          opacity: 1;
-        }
-        50% {
-          transform: scale(1.05);
-          opacity: 0.85;
-          box-shadow: 0 0 0 8px rgba(254, 214, 91, 0.25);
-        }
-      }
-      .animate-pulse {
-        animation: pulse 2s infinite ease-in-out;
-      }
-    </style>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
 
   <body>
@@ -106,7 +67,7 @@
               
               <!-- Step 3: Current (Packing Ingredients) -->
               <div class="d-flex gap-3 position-relative" style="z-index: 2;">
-                <div class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center border border-4 border-white shadow-sm animate-pulse" style="width: 40px; height: 40px; min-width: 40px; background-color: #fed65b !important;">
+                <div class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center border border-4 border-white shadow-sm p6-animate-pulse" style="width: 40px; height: 40px; min-width: 40px; background-color: #fed65b !important;">
                   <span class="material-symbols-outlined fs-5" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
                 </div>
                 <div>

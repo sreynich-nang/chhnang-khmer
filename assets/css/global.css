@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Kameron:wght@400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  /* Colors */
+  --color-bg-main: #fbfaee;
+  --color-bg-light: #f9f9f6;
+  --color-brand-yellow: #fed65b;
+  --color-brand-orange: #e67e22;
+  --color-yellow-hover: #f7c324;
+  --color-clay-brown: #5d4037;
+  --color-text-dark: #212529;
+  --color-text-muted: #555555;
+  --color-success: #2e7d32;
+
+  /* Typography & Fonts */
+  --font-primary: 'Plus Jakarta Sans', 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-title: 'Kameron', 'Edu AU VIC WA NT Guides', serif;
+
+  /* Font Sizes (in px) */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 15px;
+  --font-size-base: 16px;
+  --font-size-lg: 17px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 32px;
+}
+
+/* Base Reset & Core Layout */
+body, input, button, select, textarea {
+  font-family: var(--font-primary);
+}
+
+body {
+  background-color: var(--color-bg-main);
+  padding-top: 85px; /* Offset for fixed-top navbar */
+}
+
+/* Global Typography Utilities */
+h1, h2, h3, h4, h5, h6, .font-title, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+  font-family: var(--font-title);
+}
+
+.text-brand-orange {
+  color: var(--color-brand-orange) !important;
+}
+
+.bg-brand-orange {
+  background-color: var(--color-brand-orange) !important;
+}
+
+/* Core Buttons */
+.btn-brand-orange {
+  background-color: var(--color-brand-yellow);
+  color: var(--color-text-dark);
+  border: 1px solid var(--color-brand-yellow);
+  transition: all 0.2s ease;
+}
+
+.btn-brand-orange:hover {
+  background-color: var(--color-brand-orange);
+  border-color: var(--color-brand-orange);
+  color: #ffffff;
+}
+
+.btn-outline-brand {
+  border-color: var(--color-brand-orange) !important;
+  color: var(--color-brand-orange) !important;
+  background-color: transparent !important;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-brand:hover {
+  background-color: var(--color-brand-orange) !important;
+  border-color: var(--color-brand-orange) !important;
+  color: #ffffff !important;
+}
+
+/* ==========================================
+   Global Navbar Component
+   ========================================== */
+nav.fixed-top {
+  transition: all 0.3s ease;
+}
+
+nav.fixed-top h3 {
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+nav.fixed-top h3:hover {
+  color: var(--color-brand-orange);
+}
+
+nav.fixed-top .form-control {
+  transition: all 0.3s ease;
+}
+
+nav.fixed-top .form-control:focus {
+  border-color: var(--color-brand-yellow);
+  box-shadow: 0 0 0 4px rgba(254, 214, 91, 0.25);
+}
+
+nav.fixed-top .btn-outline-secondary {
+  transition: all 0.3s ease;
+  border-color: #ced4da;
+  color: #495057;
+}
+
+nav.fixed-top .btn-outline-secondary:hover {
+  background-color: var(--color-brand-yellow);
+  border-color: var(--color-brand-yellow);
+  color: var(--color-text-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+nav.fixed-top .btn-outline-secondary:active {
+  transform: translateY(0);
+}
+
+/* ==========================================
+   Global Footer Component
+   ========================================== */
+footer h3,
+footer .font-title,
+footer p.fs-4 {
+  font-family: var(--font-title);
+}
+
+footer .hover-link {
+  transition: all 0.3s ease;
+}
+
+footer .hover-link:hover {
+  color: var(--color-brand-orange) !important;
+  padding-left: 6px;
+}
+
+footer .btn-outline-secondary {
+  transition: all 0.3s ease;
+}
+
+footer .btn-outline-secondary:hover {
+  background-color: var(--color-brand-yellow);
+  border-color: var(--color-brand-yellow);
+  color: var(--color-text-dark);
+  transform: scale(1.1);
+}

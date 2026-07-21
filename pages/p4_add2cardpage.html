@@ -16,60 +16,9 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     />
-    <style>
-      body {
-        background-color: #fbfaee;
-        padding-top: 85px; /* Offset for the fixed-top navbar */
-      }
-      .text-brand-orange {
-        color: #e67e22 !important;
-      }
-      .btn-brand-orange {
-        background-color: #fed65b;
-        color: #212529;
-        border: 1px solid #fed65b;
-        transition: all 0.2s ease;
-      }
-      .btn-brand-orange:hover {
-        background-color: #e67e22;
-        border-color: #e67e22;
-        color: #fff;
-      }
-      .meal-card-section3 {
-        transition: all 0.3s ease;
-        border-radius: 12px;
-        overflow: hidden;
-      }
-      .meal-card-section3:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12) !important;
-      }
-      .meal-card-section3 .card-img-wrapper {
-        overflow: hidden;
-        position: relative;
-      }
-      .meal-card-section3 img {
-        transition: transform 0.5s ease;
-        height: 220px;
-        object-fit: cover;
-        width: 100%;
-      }
-      .meal-card-section3:hover img {
-        transform: scale(1.06);
-      }
-      .btn-add-section3 {
-        background-color: #fed65b;
-        color: #212529;
-        border: 1px solid #fed65b;
-        transition: all 0.2s ease;
-      }
-      .btn-add-section3:hover {
-        background-color: #e67e22;
-        border-color: #e67e22;
-        color: #fff;
-        transform: scale(1.05);
-      }
-    </style>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
 
   <body>
@@ -193,7 +142,7 @@
           <!-- card1: Lok Lak -->
           <div class="col">
             <div
-              class="card meal-card-section3 h-100 border border-secondary-subtle bg-white shadow-sm"
+              class="card p1-meal-card h-100 border border-secondary-subtle bg-white shadow-sm"
             >
               <div class="card-img-wrapper">
                 <img
@@ -218,7 +167,7 @@
                 >
                   <h5 class="text-warning fw-bold mb-0">$12.00</h5>
                   <button
-                    class="btn btn-sm rounded-pill px-3 fw-semibold btn-add-section3"
+                    class="btn btn-sm rounded-pill px-3 fw-semibold p1-btn-add"
                     onclick="window.location.href = 'p3_detailpage.html'"
                   >
                     Add
@@ -231,7 +180,7 @@
           <!-- card2: Kuy Teav -->
           <div class="col">
             <div
-              class="card meal-card-section3 h-100 border border-secondary-subtle bg-white shadow-sm"
+              class="card p1-meal-card h-100 border border-secondary-subtle bg-white shadow-sm"
             >
               <div class="card-img-wrapper">
                 <img
@@ -253,7 +202,7 @@
                 >
                   <h5 class="text-warning fw-bold mb-0">$8.50</h5>
                   <button
-                    class="btn btn-sm rounded-pill px-3 fw-semibold btn-add-section3"
+                    class="btn btn-sm rounded-pill px-3 fw-semibold p1-btn-add"
                     onclick="window.location.href = 'p3_detailpage.html'"
                   >
                     Add
@@ -266,7 +215,7 @@
           <!-- card3: Beef Sour Soup -->
           <div class="col">
             <div
-              class="card meal-card-section3 h-100 border border-secondary-subtle bg-white shadow-sm"
+              class="card p1-meal-card h-100 border border-secondary-subtle bg-white shadow-sm"
             >
               <div class="card-img-wrapper">
                 <img
@@ -290,7 +239,7 @@
                 >
                   <h5 class="text-warning fw-bold mb-0">$11.25</h5>
                   <button
-                    class="btn btn-sm rounded-pill px-3 fw-semibold btn-add-section3"
+                    class="btn btn-sm rounded-pill px-3 fw-semibold p1-btn-add"
                     onclick="window.location.href = 'p3_detailpage.html'"
                   >
                     Add
