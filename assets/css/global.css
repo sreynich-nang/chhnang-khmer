@@ -43,6 +43,18 @@ h1, h2, h3, h4, h5, h6, .font-title, .display-1, .display-2, .display-3, .displa
   font-family: var(--font-title);
 }
 
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined' !important;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}
+
 .text-brand-orange {
   color: var(--color-brand-orange) !important;
 }
@@ -120,6 +132,10 @@ nav.fixed-top .btn-outline-secondary:active {
 }
 
 /* footer */
+footer {
+  border-top: 1px solid #dee2e6;
+}
+
 footer h3,
 footer .font-title,
 footer p.fs-4 {

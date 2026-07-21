@@ -34,170 +34,197 @@
       <!-- Heading: Finalize your Order -->
       <h1 class="fw-bold mb-4 text-dark font-title">Finalize your Order</h1>
 
-      <div class="row g-4 align-items-start">
-        <!-- Left Column: Forms -->
-        <div class="col-lg-8 d-flex flex-column gap-4">
-          
-          <!-- Section 1: Delivery Info -->
-          <section class="card p-3 p-md-4 border border-secondary-subtle bg-white rounded-4 shadow-sm">
-            <div class="mb-4">
-              <h2 class="h4 fw-bold text-dark mb-0 font-title">Delivery Information</h2>
-            </div>
+      <form id="checkout-form" onsubmit="event.preventDefault(); simulateOrder();">
+        <div class="row g-4 align-items-start">
+          <!-- Left Column: Forms -->
+          <div class="col-lg-8 d-flex flex-column gap-4">
             
-            <div class="row g-3">
-              <div class="col-md-6">
-                <label class="form-label fw-semibold text-secondary-emphasis small mb-1">Full Name</label>
-                <input class="p5-form-control" placeholder="Adira" type="text">
+            <!-- Section 1: Delivery Info -->
+            <section class="card p-3 p-md-4 border border-secondary-subtle bg-white rounded-4 shadow-sm">
+              <div class="mb-4">
+                <h2 class="h4 fw-bold text-dark mb-0 font-title">Delivery Information</h2>
               </div>
-              <div class="col-md-6">
-                <label class="form-label fw-semibold text-secondary-emphasis small mb-1">Phone Number</label>
-                <input class="p5-form-control" placeholder="+855 xx xxx xxx" type="tel">
-              </div>
-              <div class="col-12">
-                <label class="form-label fw-semibold text-secondary-emphasis small mb-1">Delivery Address</label>
-                <textarea class="p5-form-control" rows="3" placeholder="House #123, St 456, Boeung Keng Kang I, Phnom Penh"></textarea>
-              </div>
-              <div class="col-md-6">
-                <label class="form-label fw-semibold text-secondary-emphasis small mb-1">Delivery Date</label>
-                <input class="p5-form-control" type="date">
-              </div>
-              <div class="col-md-6">
-                <label class="form-label fw-semibold text-secondary-emphasis small mb-1">Delivery Time</label>
-                <select class="p5-form-select">
-                  <option>09:00 AM - 11:00 AM</option>
-                  <option>11:00 AM - 01:00 PM</option>
-                  <option>01:00 PM - 03:00 PM</option>
-                  <option>03:00 PM - 05:00 PM</option>
-                </select>
-              </div>
-            </div>
-          </section>
+              
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold text-secondary-emphasis small mb-1">Full Name <span class="text-danger">*</span></label>
+                  <input class="p5-form-control" placeholder="Adira" type="text" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold text-secondary-emphasis small mb-1">Phone Number <span class="text-danger">*</span></label>
+                  <input class="p5-form-control" placeholder="+855 xx xxx xxx" type="tel" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold text-secondary-emphasis small mb-1">Delivery Date <span class="text-danger">*</span></label>
+                  <input class="p5-form-control" type="date" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold text-secondary-emphasis small mb-1">Delivery Time <span class="text-danger">*</span></label>
+                  <select class="p5-form-select" required>
+                    <option value="">Select Delivery Time...</option>
+                    <option value="09:00 AM - 11:00 AM">09:00 AM - 11:00 AM</option>
+                    <option value="11:00 AM - 01:00 PM">11:00 AM - 01:00 PM</option>
+                    <option value="01:00 PM - 03:00 PM">01:00 PM - 03:00 PM</option>
+                    <option value="03:00 PM - 05:00 PM">03:00 PM - 05:00 PM</option>
+                  </select>
+                </div>
+                <!-- Meet At Field -->
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold text-secondary-emphasis small mb-1">Meet At <span class="text-danger">*</span></label>
+                  <select class="p5-form-select" required>
+                    <option value="Front Door / Gate">Front Door / Gate</option>
+                    <option value="Building Lobby / Reception">Building Lobby / Reception</option>
+                    <option value="Security Guard Post">Security Guard Post</option>
+                    <option value="Hand directly to me">Hand directly to me</option>
+                    <option value="Parking Lot / Outside">Parking Lot / Outside</option>
+                  </select>
+                </div>
 
-          <!-- Section 2: Payment Method -->
-          <section class="card p-3 p-md-4 border border-secondary-subtle bg-white rounded-4 shadow-sm">
-            <div class="mb-4">
-              <h2 class="h4 fw-bold text-dark mb-0 font-title">Payment Method</h2>
-            </div>
-            
-            <div class="row g-3">
-              <!-- ABA -->
-              <div class="col-4">
-                <input type="radio" class="btn-check" name="payment" id="payment-aba">
-                <label class="card p-3 text-center p5-payment-card border-2 transition-all" for="payment-aba">
-                  <div class="d-flex flex-column align-items-center justify-content-center w-100">
-                    <div class="logo-wrapper mb-2">
-                      <img src="../assets/images/aba.png" alt="ABA Pay" class="payment-logo rounded-circle" style="width: 48px; height: 48px; object-fit: cover;">
-                    </div>
-                    <span class="fw-bold small text-dark">ABA Pay</span>
+                <div class="col-12">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <label class="form-label fw-semibold text-secondary-emphasis small mb-0">Delivery Address <span class="text-danger">*</span></label>
+                    <a
+                      href="https://maps.google.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="btn btn-sm btn-outline-warning text-dark fw-bold rounded-pill d-inline-flex align-items-center gap-1 py-1 px-3 text-decoration-none"
+                      style="font-size: 0.82rem; border-color: var(--color-brand-yellow); background-color: rgba(254, 214, 91, 0.2);"
+                    >
+                      <span class="material-symbols-outlined text-brand-orange" style="font-size: 1.1rem;">location_on</span>
+                      Open Google Maps ↗
+                    </a>
                   </div>
-                </label>
+                  <textarea class="p5-form-control" rows="3" placeholder="House #123, St 456, Boeung Keng Kang I, Phnom Penh" required></textarea>
+                </div>
               </div>
-              
-              <!-- ACLEDA -->
-              <div class="col-4">
-                <input type="radio" class="btn-check" name="payment" id="payment-acleda">
-                <label class="card p-3 text-center p5-payment-card border-2 transition-all" for="payment-acleda">
-                  <div class="d-flex flex-column align-items-center justify-content-center w-100">
-                    <div class="logo-wrapper mb-2">
-                      <img src="../assets/images/aclida.png" alt="ACLEDA" class="payment-logo rounded-circle" style="width: 48px; height: 48px; object-fit: cover;">
-                    </div>
-                    <span class="fw-bold small text-dark">ACLEDA</span>
-                  </div>
-                </label>
-              </div>
-              
-              <!-- Wing -->
-              <div class="col-4">
-                <input type="radio" class="btn-check" name="payment" id="payment-wing">
-                <label class="card p-3 text-center p5-payment-card border-2 transition-all" for="payment-wing">
-                  <div class="d-flex flex-column align-items-center justify-content-center w-100">
-                    <div class="logo-wrapper mb-2">
-                      <img src="../assets/images/wing.png" alt="Wing" class="payment-logo rounded-circle" style="width: 48px; height: 48px; object-fit: cover;">
-                    </div>
-                    <span class="fw-bold small text-dark">Wing</span>
-                  </div>
-                </label>
-              </div>
-            </div>
-          </section>
-        </div>
+            </section>
 
-        <!-- Right Column: Order Summary -->
-        <aside class="col-lg-4 sticky-top" style="top: 100px;">
-          <div class="p5-summary-box">
-            <h3 class="h4 fw-bold mb-3 font-title">Order Summary</h3>
-            <div class="d-flex flex-column gap-3 mb-4">
-              
-              <div class="d-flex justify-content-between align-items-start">
-                <div>
-                  <p class="fw-semibold mb-0">Amok Fish Kit</p>
-                  <p class="small text-white-50 mb-0">2 Servings</p>
-                </div>
-                <p class="fw-semibold mb-0">$14.00</p>
+            <!-- Section 2: Payment Method -->
+            <section class="card p-3 p-md-4 border border-secondary-subtle bg-white rounded-4 shadow-sm">
+              <div class="mb-4">
+                <h2 class="h4 fw-bold text-dark mb-0 font-title">Payment Method <span class="text-danger">*</span></h2>
               </div>
               
-              <div class="d-flex justify-content-between align-items-start">
-                <div>
-                  <p class="fw-semibold mb-0">Beef Lok Lak Kit</p>
-                  <p class="small text-white-50 mb-0">2 Servings</p>
+              <div class="row g-3">
+                <!-- ABA -->
+                <div class="col-4">
+                  <input type="radio" class="btn-check" name="payment" id="payment-aba" required checked>
+                  <label class="card p-3 text-center p5-payment-card border-2 transition-all" for="payment-aba">
+                    <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                      <div class="logo-wrapper mb-2">
+                        <img src="../assets/images/aba.png" alt="ABA Pay" class="payment-logo rounded-circle" style="width: 48px; height: 48px; object-fit: cover;">
+                      </div>
+                      <span class="fw-bold small text-dark">ABA Pay</span>
+                    </div>
+                  </label>
                 </div>
-                <p class="fw-semibold mb-0">$16.00</p>
+                
+                <!-- ACLEDA -->
+                <div class="col-4">
+                  <input type="radio" class="btn-check" name="payment" id="payment-acleda" required>
+                  <label class="card p-3 text-center p5-payment-card border-2 transition-all" for="payment-acleda">
+                    <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                      <div class="logo-wrapper mb-2">
+                        <img src="../assets/images/aclida.png" alt="ACLEDA" class="payment-logo rounded-circle" style="width: 48px; height: 48px; object-fit: cover;">
+                      </div>
+                      <span class="fw-bold small text-dark">ACLEDA</span>
+                    </div>
+                  </label>
+                </div>
+                
+                <!-- Wing -->
+                <div class="col-4">
+                  <input type="radio" class="btn-check" name="payment" id="payment-wing" required>
+                  <label class="card p-3 text-center p5-payment-card border-2 transition-all" for="payment-wing">
+                    <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                      <div class="logo-wrapper mb-2">
+                        <img src="../assets/images/wing.png" alt="Wing" class="payment-logo rounded-circle" style="width: 48px; height: 48px; object-fit: cover;">
+                      </div>
+                      <span class="fw-bold small text-dark">Wing</span>
+                    </div>
+                  </label>
+                </div>
               </div>
-              
-              <div class="pt-3 border-t border-white-20 space-y-xs">
-                <div class="d-flex justify-content-between small opacity-80">
-                  <span>Subtotal</span>
-                  <span>$30.00</span>
-                </div>
-                <div class="d-flex justify-content-between small opacity-80 mt-1">
-                  <span>Delivery Fee</span>
-                  <span>$1.50</span>
-                </div>
-                <div id="discount-row" class="d-flex justify-content-between small mt-1 text-warning fw-bold" style="display: none !important;">
-                  <span>Promo Discount</span>
-                  <span id="discount-amount">-$3.00</span>
-                </div>
-              </div>
-
-              <!-- Promo Code Section -->
-              <div class="my-3 pt-3 border-top border-white-20">
-                <label class="small text-white-50 mb-2 font-title fw-bold">Have a Promo Code?</label>
-                <div class="input-group">
-                  <input
-                    type="text"
-                    id="promo-code-input"
-                    class="form-control form-control-sm bg-white bg-opacity-10 text-white border-white-20 rounded-start-pill ps-3"
-                    placeholder="e.g. KHMER10"
-                    style="font-size: 0.85rem;"
-                  />
-                  <button
-                    type="button"
-                    class="btn btn-warning btn-sm rounded-end-pill px-3 fw-bold text-dark"
-                    onclick="applyPromoCode()"
-                    style="background-color: var(--color-brand-yellow); border: none;"
-                  >
-                    Apply
-                  </button>
-                </div>
-                <div id="promo-message" class="small mt-2" style="display: none;"></div>
-              </div>
-            </div>
-            
-            <div class="d-flex justify-content-between align-items-center mb-4">
-              <span class="h4 fw-bold mb-0">Total</span>
-              <span id="checkout-total" class="h4 fw-bold text-warning mb-0">$31.50</span>
-            </div>
-            
-            <button class="btn p5-btn-place-order w-100 py-3 d-flex align-items-center justify-content-center gap-2" onclick="simulateOrder()">
-              <span>Place Order</span>
-              <span class="material-symbols-outlined">arrow_forward</span>
-            </button>
-            
-            <p class="small text-center mt-3 opacity-60 mb-0 italic">Secure checkout powered by Chhnang Khmer</p>
+            </section>
           </div>
 
-        </aside>
-      </div>
+          <!-- Right Column: Order Summary -->
+          <aside class="col-lg-4 sticky-top" style="top: 100px;">
+            <div class="p5-summary-box">
+              <h3 class="h4 fw-bold mb-3 font-title">Order Summary</h3>
+              <div class="d-flex flex-column gap-3 mb-4">
+                
+                <div class="d-flex justify-content-between align-items-start">
+                  <div>
+                    <p class="fw-semibold mb-0">Amok Fish Kit</p>
+                    <p class="small text-white-50 mb-0">2 Servings</p>
+                  </div>
+                  <p class="fw-semibold mb-0">$14.00</p>
+                </div>
+                
+                <div class="d-flex justify-content-between align-items-start">
+                  <div>
+                    <p class="fw-semibold mb-0">Beef Lok Lak Kit</p>
+                    <p class="small text-white-50 mb-0">2 Servings</p>
+                  </div>
+                  <p class="fw-semibold mb-0">$16.00</p>
+                </div>
+                
+                <div class="pt-3 border-t border-white-20 space-y-xs">
+                  <div class="d-flex justify-content-between small opacity-80">
+                    <span>Subtotal</span>
+                    <span>$30.00</span>
+                  </div>
+                  <div class="d-flex justify-content-between small opacity-80 mt-1">
+                    <span>Delivery Fee</span>
+                    <span>$1.50</span>
+                  </div>
+                  <div id="discount-row" class="d-flex justify-content-between small mt-1 text-warning fw-bold" style="display: none !important;">
+                    <span>Promo Discount</span>
+                    <span id="discount-amount">-$3.00</span>
+                  </div>
+                </div>
+
+                <!-- Promo Code Section -->
+                <div class="my-3 pt-3 border-top border-white-20">
+                  <label class="small text-white-50 mb-2 font-title fw-bold">Have a Promo Code?</label>
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      id="promo-code-input"
+                      class="form-control form-control-sm bg-white bg-opacity-10 text-white border-white-20 rounded-start-pill ps-3"
+                      placeholder="e.g. KHMER10"
+                      style="font-size: 0.85rem;"
+                    />
+                    <button
+                      type="button"
+                      class="btn btn-warning btn-sm rounded-end-pill px-3 fw-bold text-dark"
+                      onclick="applyPromoCode()"
+                      style="background-color: var(--color-brand-yellow); border: none;"
+                    >
+                      Apply
+                    </button>
+                  </div>
+                  <div id="promo-message" class="small mt-2" style="display: none;"></div>
+                </div>
+              </div>
+              
+              <div class="d-flex justify-content-between align-items-center mb-4">
+                <span class="h4 fw-bold mb-0">Total</span>
+                <span id="checkout-total" class="h4 fw-bold text-warning mb-0">$31.50</span>
+              </div>
+              
+              <button type="submit" form="checkout-form" class="btn p5-btn-place-order w-100 py-3 d-flex align-items-center justify-content-center gap-2">
+                <span>Place Order</span>
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </button>
+              
+              <p class="small text-center mt-3 opacity-60 mb-0 italic">Secure checkout powered by Chhnang Khmer</p>
+            </div>
+
+          </aside>
+        </div>
+      </form>
     </main>
 
     <!-- footer -->
