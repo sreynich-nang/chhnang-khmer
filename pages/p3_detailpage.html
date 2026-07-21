@@ -148,25 +148,25 @@
             class="bg-white p-4 rounded-3 border border-secondary-subtle mb-4"
           >
             <!-- Ingredients Header & Servings Control -->
-            <div class="d-flex justify-content-between align-items-center mb-4">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-4">
               <h3 class="fw-bold mb-0 text-dark">Ingredients</h3>
 
               <!-- Servings Counter -->
               <div
-                class="d-flex align-items-center bg-white rounded-pill p-1 border border-secondary-subtle"
+                class="d-flex align-items-center bg-white rounded-pill p-1 border border-secondary-subtle flex-shrink-0"
               >
                 <button
-                  class="btn rounded-circle p-0 d-flex align-items-center justify-content-center p3-btn-serving-control"
+                  class="btn rounded-circle p-0 d-flex align-items-center justify-content-center p3-btn-serving-control flex-shrink-0"
                   style="width: 32px; height: 32px"
                   onclick="updateServings(-1)"
                 >
                   <span class="material-symbols-outlined fs-5">remove</span>
                 </button>
-                <span class="px-3 fw-bold text-brand-orange" id="serving-count"
+                <span class="px-2 px-sm-3 fw-bold text-brand-orange text-nowrap" id="serving-count"
                   >2 Persons</span
                 >
                 <button
-                  class="btn rounded-circle p-0 d-flex align-items-center justify-content-center p3-btn-serving-control"
+                  class="btn rounded-circle p-0 d-flex align-items-center justify-content-center p3-btn-serving-control flex-shrink-0"
                   style="width: 32px; height: 32px"
                   onclick="updateServings(1)"
                 >
@@ -176,7 +176,7 @@
             </div>
 
             <!-- Ingredients Grid -->
-            <div class="row row-cols-2 row-cols-sm-3 g-3" id="ingredients-grid">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="ingredients-grid">
               <!-- Card 1: Fish Fillet -->
               <div class="col">
                 <div
@@ -191,14 +191,14 @@
                     />
                   </div>
                   <div
-                    class="p-3 d-flex justify-content-between align-items-center"
+                    class="p-2 p-sm-3 d-flex justify-content-between align-items-center gap-1"
                   >
-                    <span class="fw-bold text-dark mb-0">Fish Fillet</span>
+                    <span class="fw-bold text-dark mb-0 text-truncate me-1">Fish Fillet</span>
                     <span
-                      class="text-brand-orange fw-bold ingredient-qty mb-0 border border-secondary-subtle px-2 py-1 rounded bg-light"
+                      class="text-brand-orange fw-bold ingredient-qty mb-0 border border-secondary-subtle px-2 py-1 rounded bg-light flex-shrink-0"
                       data-base="150"
                       id="ingredient-qty-fish-1"
-                      style="font-size: 0.9rem"
+                      style="font-size: 0.85rem"
                       >300g</span
                     >
                   </div>
@@ -219,14 +219,14 @@
                     />
                   </div>
                   <div
-                    class="p-3 d-flex justify-content-between align-items-center"
+                    class="p-2 p-sm-3 d-flex justify-content-between align-items-center gap-1"
                   >
-                    <span class="fw-bold text-dark mb-0">Fish Fillet</span>
+                    <span class="fw-bold text-dark mb-0 text-truncate me-1">Fish Fillet</span>
                     <span
-                      class="text-brand-orange fw-bold ingredient-qty mb-0 border border-secondary-subtle px-2 py-1 rounded bg-light"
+                      class="text-brand-orange fw-bold ingredient-qty mb-0 border border-secondary-subtle px-2 py-1 rounded bg-light flex-shrink-0"
                       data-base="150"
                       id="ingredient-qty-fish-2"
-                      style="font-size: 0.9rem"
+                      style="font-size: 0.85rem"
                       >300g</span
                     >
                   </div>
@@ -247,14 +247,14 @@
                     />
                   </div>
                   <div
-                    class="p-3 d-flex justify-content-between align-items-center"
+                    class="p-2 p-sm-3 d-flex justify-content-between align-items-center gap-1"
                   >
-                    <span class="fw-bold text-dark mb-0">Fish Fillet</span>
+                    <span class="fw-bold text-dark mb-0 text-truncate me-1">Fish Fillet</span>
                     <span
-                      class="text-brand-orange fw-bold ingredient-qty mb-0 border border-secondary-subtle px-2 py-1 rounded bg-light"
+                      class="text-brand-orange fw-bold ingredient-qty mb-0 border border-secondary-subtle px-2 py-1 rounded bg-light flex-shrink-0"
                       data-base="150"
                       id="ingredient-qty-fish-3"
-                      style="font-size: 0.9rem"
+                      style="font-size: 0.85rem"
                       >300g</span
                     >
                   </div>
@@ -275,14 +275,14 @@
                     />
                   </div>
                   <div
-                    class="p-3 d-flex justify-content-between align-items-center"
+                    class="p-2 p-sm-3 d-flex justify-content-between align-items-center gap-1"
                   >
-                    <span class="fw-bold text-dark mb-0">Fish Fillet</span>
+                    <span class="fw-bold text-dark mb-0 text-truncate me-1">Fish Fillet</span>
                     <span
-                      class="text-brand-orange fw-bold ingredient-qty mb-0 border border-secondary-subtle px-2 py-1 rounded bg-light"
+                      class="text-brand-orange fw-bold ingredient-qty mb-0 border border-secondary-subtle px-2 py-1 rounded bg-light flex-shrink-0"
                       data-base="150"
                       id="ingredient-qty-fish-4"
-                      style="font-size: 0.9rem"
+                      style="font-size: 0.85rem"
                       >300g</span
                     >
                   </div>
@@ -303,14 +303,14 @@
                     />
                   </div>
                   <div
-                    class="p-3 d-flex justify-content-between align-items-center"
+                    class="p-2 p-sm-3 d-flex justify-content-between align-items-center gap-1"
                   >
-                    <span class="fw-bold text-dark mb-0">Fish Fillet</span>
+                    <span class="fw-bold text-dark mb-0 text-truncate me-1">Fish Fillet</span>
                     <span
-                      class="text-brand-orange fw-bold ingredient-qty mb-0 border border-secondary-subtle px-2 py-1 rounded bg-light"
+                      class="text-brand-orange fw-bold ingredient-qty mb-0 border border-secondary-subtle px-2 py-1 rounded bg-light flex-shrink-0"
                       data-base="150"
                       id="ingredient-qty-fish-5"
-                      style="font-size: 0.9rem"
+                      style="font-size: 0.85rem"
                       >300g</span
                     >
                   </div>

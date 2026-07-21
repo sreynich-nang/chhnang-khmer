@@ -1,6 +1,4 @@
-/* ==========================================
-   Page 1 / Homepage Components (p1- / index-)
-   ========================================== */
+/* p1-homepage */
 .p1-category-card {
   transition: all 0.3s ease;
   cursor: pointer;
@@ -76,9 +74,7 @@
 }
 
 
-/* ==========================================
-   Page 3 / Recipe Detail Components (p3-)
-   ========================================== */
+/* p3-detailpage */
 #p3-rating-stars .p3-star-icon {
   font-variation-settings: "FILL" 0;
   cursor: pointer;
@@ -172,9 +168,7 @@
 }
 
 
-/* ==========================================
-   Page 5 / Checkout Components (p5-)
-   ========================================== */
+/* p5-checkout */
 .p5-form-control,
 .p5-form-select {
   width: 100%;
@@ -256,9 +250,7 @@
 }
 
 
-/* ==========================================
-   Page 6 / Track Order Components (p6-)
-   ========================================== */
+/* p6-trackorder */
 @keyframes p6-pulse {
   0%, 100% {
     transform: scale(1);
@@ -274,3 +266,130 @@
 .p6-animate-pulse {
   animation: p6-pulse 2s infinite ease-in-out;
 }
+
+/* p2-viewall */
+.p2-banner {
+  position: relative;
+  background: linear-gradient(180deg, rgba(33, 37, 41, 0.75) 0%, rgba(33, 37, 41, 0.85) 100%),
+              url('https://malis.thalias.com.kh/wp-content/uploads/2024/05/Malis-Khmer-Traditional-Food.png') center/cover no-repeat;
+  color: #ffffff;
+  padding: 60px 0 50px 0;
+  border-radius: 0 0 20px 20px;
+}
+
+.p2-btn-toggle {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.p2-btn-toggle:hover,
+.p2-btn-toggle.active {
+  background-color: var(--color-brand-yellow);
+  color: var(--color-text-dark);
+  border-color: var(--color-brand-yellow);
+}
+
+.p2-filter-sidebar {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+}
+
+.p2-filter-title {
+  font-weight: 700;
+  border-bottom: 2px solid var(--color-brand-yellow);
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  color: var(--color-text-dark);
+}
+
+.p2-filter-label {
+  font-weight: 600;
+  font-size: var(--font-size-md);
+  margin-bottom: 8px;
+  color: var(--color-text-dark);
+}
+
+.p2-form-select,
+.p2-form-input {
+  border-radius: 10px;
+  border: 1px solid #dee2e6;
+  padding: 10px 14px;
+  font-size: var(--font-size-sm);
+  background-color: var(--color-bg-light);
+  transition: all 0.2s ease;
+}
+
+.p2-form-select:focus,
+.p2-form-input:focus {
+  border-color: var(--color-brand-orange);
+  box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.15);
+  background-color: #ffffff;
+}
+
+.p2-set-card {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.p2-set-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.p2-card-img-wrapper {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.p2-card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.p2-set-card:hover .p2-card-img-wrapper img {
+  transform: scale(1.08);
+}
+
+.p2-card-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  font-size: var(--font-size-xs);
+  padding: 4px 10px;
+  border-radius: 50px;
+}
+
+.p2-btn-action {
+  background-color: var(--color-brand-yellow);
+  color: var(--color-text-dark);
+  border: 1px solid var(--color-brand-yellow);
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  transition: all 0.2s ease;
+}
+
+.p2-btn-action:hover {
+  background-color: var(--color-brand-orange);
+  border-color: var(--color-brand-orange);
+  color: #ffffff;
+  transform: scale(1.03);
+}
+

@@ -1,11 +1,185 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Recipe Sets - Chhnang Khmer</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <!-- Material Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <!-- Background Banner Section -->
+    <section class="p2-banner text-center mb-5">
+      <div class="container py-4">
+        <h1 class="display-4 fw-bold text-white mb-3">Explore All Recipe Sets</h1>
+        <p class="lead text-white-50 mx-auto mb-4" style="max-width: 650px;">
+          Discover authentic traditional and modern recipe kits. Pre-portioned fresh ingredients delivered right to your kitchen door.
+        </p>
+        <div class="d-flex justify-content-center gap-3">
+          <button id="p2-toggle-all" class="btn p2-btn-toggle active">
+            <span class="material-symbols-outlined align-middle me-1">grid_view</span> All Sets
+          </button>
+          <button id="p2-toggle-best" class="btn p2-btn-toggle">
+            <span class="material-symbols-outlined align-middle me-1">grade</span> Best Sets
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Section: d-flex / 1/3 and 2/3 layout -->
+    <div class="container pb-5">
+      <div class="row g-4">
+        <!-- 1/3 Row: Filter Sidebar -->
+        <aside class="col-lg-4">
+          <div class="p2-filter-sidebar sticky-top" style="top: 100px; z-index: 10;">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h4 class="p2-filter-title mb-0 border-0 p-0">Filter By</h4>
+              <button type="reset" class="btn btn-sm text-muted p-0 text-decoration-underline">Reset All</button>
+            </div>
+
+            <form action="#" method="GET">
+              <!-- Filter: Category / All Sets -->
+              <div class="mb-4">
+                <label class="p2-filter-label d-block">Category</label>
+                <select name="category" id="p2-filter-category" class="form-select p2-form-select">
+                  <option value="all" selected>All Sets</option>
+                  <option value="best">Best Sets Only</option>
+                </select>
+              </div>
+
+              <!-- Filter: Cuisine Dropdown -->
+              <div class="mb-4">
+                <label class="p2-filter-label d-block">Cuisine</label>
+                <select name="cuisine" id="p2-filter-cuisine" class="form-select p2-form-select">
+                  <option value="all" selected>All Cuisines</option>
+                  <option value="khmer">Khmer Food</option>
+                  <option value="italian">Italian Food</option>
+                  <option value="indian">Indian Food</option>
+                  <option value="chinese">Chinese Food</option>
+                  <option value="japanese">Japanese Food</option>
+                  <option value="korean">Korean Food</option>
+                </select>
+              </div>
+
+              <!-- Filter: Diet Set Dropdown -->
+              <div class="mb-4">
+                <label class="p2-filter-label d-block">Diet Set</label>
+                <select name="diet" id="p2-filter-diet" class="form-select p2-form-select">
+                  <option value="all" selected>All Diets</option>
+                  <option value="vegetarian">Vegetarian</option>
+                  <option value="vegan">Vegan</option>
+                  <option value="low-carb">Low Carb</option>
+                  <option value="gluten-free">Gluten-Free</option>
+                </select>
+              </div>
+
+              <!-- Filter: Price Range -->
+              <div class="mb-4">
+                <label class="p2-filter-label d-block">Price Range ($)</label>
+                <div class="row g-2 align-items-center">
+                  <div class="col-6">
+                    <input type="number" name="min_price" id="p2-price-min" class="form-control p2-form-input" placeholder="Min $0" min="0" max="100">
+                  </div>
+                  <div class="col-6">
+                    <input type="number" name="max_price" id="p2-price-max" class="form-control p2-form-input" placeholder="Max $50" min="0" max="100">
+                  </div>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-warning w-100 fw-bold rounded-pill p2-btn-action mt-2">
+                Apply Filters
+              </button>
+            </form>
+          </div>
+        </aside>
+
+        <!-- 2/3 Row: Set Cards Grid -->
+        <main class="col-lg-8">
+          <!-- Top bar with count & sorting -->
+          <div class="d-flex justify-content-between align-items-center mb-4 bg-white p-3 rounded-4 shadow-sm border">
+            <span id="p2-result-count" class="fw-semibold text-secondary">Showing Recipe Kits</span>
+            <div class="d-flex align-items-center gap-2">
+              <label for="p2-sort-by" class="small text-muted mb-0">Sort By:</label>
+              <select name="sort" id="p2-sort-by" class="form-select form-select-sm border-0 bg-light rounded-pill" style="width: auto;">
+                <option value="default">Featured</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="popular">Most Popular</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Recipe Kit Cards Container (Loaded via p2_card.html component) -->
+          <div id="p2-cards-container" class="row row-cols-1 row-cols-md-2 g-4"></div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Footer Component -->
+    <div id="footer"></div>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Component Loader & Card Component Integration -->
+    <script>
+      function loadComponent(url, elementId) {
+        fetch(url)
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById(elementId).innerHTML = data;
+          });
+      }
+
+      loadComponent("components/footer.html", "footer");
+      loadComponent("components/nav.html", "navbar");
+
+      // Component Template (p2_card.html) and render items from recippKits.json
+      function loadRecipeCards() {
+        Promise.all([
+          fetch("components/p2_card.html").then(res => res.text()),
+          fetch("recippKits.json").then(res => res.json())
+        ]).then(([template, kits]) => {
+          const container = document.getElementById("p2-cards-container");
+          const countText = document.getElementById("p2-result-count");
+          countText.innerText = `Showing ${kits.length} Recipe Kits`;
+
+          container.innerHTML = kits.map(kit => {
+            return template
+              .replace(/{{BADGE}}/g, kit.badge)
+              .replace(/{{IMAGE}}/g, kit.image)
+              .replace(/{{NAME}}/g, kit.name)
+              .replace(/{{CUISINE}}/g, kit.cuisine)
+              .replace(/{{DIET}}/g, kit.diet)
+              .replace(/{{DESCRIPTION}}/g, kit.description)
+              .replace(/{{PRICE}}/g, kit.price.toFixed(2));
+          }).join('');
+        }).catch(err => console.error("Error loading component or dataset:", err));
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        loadRecipeCards();
+      });
+    </script>
+  </body>
 </html>

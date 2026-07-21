@@ -1,0 +1,189 @@
+[
+  {
+    "id": 1,
+    "name": "Amok Fish Kit",
+    "description": "Creamy coconut fish curry steamed in banana leaves with lemongrass and spice kit.",
+    "price": 14.50,
+    "cuisine": "khmer",
+    "diet": "gluten-free",
+    "isBest": true,
+    "badge": "Signature",
+    "image": "https://malis.thalias.com.kh/wp-content/uploads/2024/08/New-Project-1-1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Beef Lok Lak Set",
+    "description": "Sizzling tender beef stir-fry paired with fresh lettuce, tomatoes, and lime-pepper dip.",
+    "price": 12.00,
+    "cuisine": "khmer",
+    "diet": "low-carb",
+    "isBest": true,
+    "badge": "Best Seller",
+    "image": "https://malis.thalias.com.kh/wp-content/uploads/2024/07/DST_6265-1-921x1024.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Kuy Teav Noodle Soup",
+    "description": "Traditional savory rice noodle broth set with tender pork slices and fresh herbs.",
+    "price": 8.50,
+    "cuisine": "khmer",
+    "diet": "all",
+    "isBest": false,
+    "badge": "Comfort Food",
+    "image": "https://malis.thalias.com.kh/wp-content/uploads/2024/07/DST_4752-1536x1025.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Italian Seafood Pasta",
+    "description": "Fresh handmade pasta tossed with succulent seafood, tomatoes, and aromatic basil.",
+    "price": 16.00,
+    "cuisine": "italian",
+    "diet": "all",
+    "isBest": true,
+    "badge": "Popular",
+    "image": "https://media.gettyimages.com/id/1352855347/photo/italian-seafood-pasta.jpg?s=170667a&w=0&k=20&c=fDofVDxGR5LP6c8d6oIzbYTN5IqAZhGOvOyXZUe6p7I="
+  },
+  {
+    "id": 5,
+    "name": "Homemade Pasta Set",
+    "description": "Artisanal fresh pasta dough kit complete with traditional marinara and herbs.",
+    "price": 13.50,
+    "cuisine": "italian",
+    "diet": "vegetarian",
+    "isBest": false,
+    "badge": "Classic",
+    "image": "https://media.gettyimages.com/id/488960908/photo/homemade-pasta.jpg?s=170667a&w=0&k=20&c=AMntKVIlIkIUKzvOyfQ3fnRzWhdWzs9RBgFuVJhY_QY="
+  },
+  {
+    "id": 6,
+    "name": "Fresh Salmon Donburi",
+    "description": "Premium sashimi-grade salmon slices served over seasoned Japanese rice.",
+    "price": 17.50,
+    "cuisine": "japanese",
+    "diet": "gluten-free",
+    "isBest": true,
+    "badge": "Chef Special",
+    "image": "https://media.gettyimages.com/id/2162177489/photo/top-eye-view-closeup-of-women-left-hand-holding-circle-fresh-salmon-slices-on-japanese-rice.jpg?s=170667a&w=0&k=20&c=HxxWDWsMAomkRtvFCiwZYUJDcpIobHJNEowpP6k6bwE="
+  },
+  {
+    "id": 7,
+    "name": "Tonkotsu Ramen Kit",
+    "description": "Rich pork bone broth ramen set with soft-boiled egg, chashu, and fresh noodles.",
+    "price": 14.00,
+    "cuisine": "japanese",
+    "diet": "all",
+    "isBest": true,
+    "badge": "Top Rated",
+    "image": "https://media.gettyimages.com/id/2184568165/photo/man-eating-tonkotsu-ramen-personal-perspective-directly-above-view.jpg?s=170667a&w=0&k=20&c=pQzBDY8-2OJpFoQG0m1uzY1zgQV_OsH_S6i1VS-vDhs="
+  },
+  {
+    "id": 8,
+    "name": "Tempura Udon Soup",
+    "description": "Crispy prawn tempura with thick wheat udon noodles in light dashi broth.",
+    "price": 12.50,
+    "cuisine": "japanese",
+    "diet": "all",
+    "isBest": false,
+    "badge": "Favorites",
+    "image": "https://media.gettyimages.com/id/143676202/photo/tempura-udon.jpg?s=170667a&w=0&k=20&c=jui5HDh-D9AzKoKRbIBGwQgKFZoA9nbW9T5ygMiZfrs="
+  },
+  {
+    "id": 9,
+    "name": "Beef Broth Asian Noodles",
+    "description": "Slow-cooked savory beef soup noodles served on traditional wooden table set.",
+    "price": 13.00,
+    "cuisine": "chinese",
+    "diet": "all",
+    "isBest": false,
+    "badge": "Comfort Meal",
+    "image": "https://media.gettyimages.com/id/1371897640/photo/asian-noodles-in-broth-with-slow-cooked-beef-on-the-wooden-table.jpg?s=170667a&w=0&k=20&c=wA5bX2XnKnNcBm5GYXYElR8033SbCk2lSZVAltYKgSs="
+  },
+  {
+    "id": 10,
+    "name": "Claypot Mapo Tofu",
+    "description": "Spicy Sichuan pepper tofu in claypot broth with minced pork and scallions.",
+    "price": 10.50,
+    "cuisine": "chinese",
+    "diet": "low-carb",
+    "isBest": true,
+    "badge": "Spicy Kick",
+    "image": "https://media.gettyimages.com/id/1669117105/photo/mapo-tofu-served-in-clay-pot.jpg?s=170667a&w=0&k=20&c=v60fIKy3wgQv3FHO0FrPQ94Jpkw-HSHJT2xrbQ4QOuM="
+  },
+  {
+    "id": 11,
+    "name": "Steamed Dumplings Kit",
+    "description": "Handcrafted pork & chive steamed dumplings served on slate platter with dipping sauce.",
+    "price": 11.00,
+    "cuisine": "chinese",
+    "diet": "all",
+    "isBest": false,
+    "badge": "Appetizer",
+    "image": "https://media.gettyimages.com/id/1363696838/photo/dumplings-on-the-slate.jpg?s=170667a&w=0&k=20&c=gyEw7WfFHEn_vkgG3jqWF_jEhMhOLGnLmaCRfsldt6M="
+  },
+  {
+    "id": 12,
+    "name": "Crispy Parmesan Polenta",
+    "description": "Crispy golden polenta cakes with savory spices and herb garnish.",
+    "price": 14.00,
+    "cuisine": "indian",
+    "diet": "vegetarian",
+    "isBest": false,
+    "badge": "Crispy Delight",
+    "image": "https://media.gettyimages.com/id/1765114960/photo/crispy-parmesan-polenta-cakes.jpg?s=170667a&w=0&k=20&c=Olg-tJ7wZPmb0bUzelm_X3EgrO78qz2KLjlsGtlHNNo="
+  },
+  {
+    "id": 13,
+    "name": "Traditional Indian Thali",
+    "description": "Authentic multi-dish thali platter with curries, dal, basmati rice, and naan.",
+    "price": 18.50,
+    "cuisine": "indian",
+    "diet": "gluten-free",
+    "isBest": true,
+    "badge": "Grand Feast",
+    "image": "https://media.gettyimages.com/id/2242361524/photo/traditional-indian-thali-meal.jpg?s=170667a&w=0&k=20&c=AT-2Pt-wlB37ntMn4yKJ2cZrfK2JCFXxqgyOo1cx_Ew="
+  },
+  {
+    "id": 14,
+    "name": "Dolsot Bibimbap",
+    "description": "Sizzling stone pot rice with assorted vegetables, fried egg, and gochujang paste.",
+    "price": 12.50,
+    "cuisine": "korean",
+    "diet": "vegetarian",
+    "isBest": true,
+    "badge": "Popular",
+    "image": "https://media.gettyimages.com/id/155385236/photo/dolsot-bibimbap.jpg?s=170667a&w=0&k=20&c=OeMRn00dfqvf0I6YvrFU31nFsQUee6lvAekKRcF3FcQ="
+  },
+  {
+    "id": 15,
+    "name": "Korean Pajeon Pancake",
+    "description": "Crispy Korean scallion and seafood pancake served with savory soy dipping sauce.",
+    "price": 9.50,
+    "cuisine": "korean",
+    "diet": "all",
+    "isBest": false,
+    "badge": "Street Food",
+    "image": "https://media.gettyimages.com/id/157610281/photo/pa-jeon.jpg?s=170667a&w=0&k=20&c=1YNtGV3fjmNuwV3F4oXulXy130HHvRxIU4CfGKul_5Y="
+  },
+  {
+    "id": 16,
+    "name": "Samgyetang Ginseng Soup",
+    "description": "Nourishing Korean ginseng chicken soup with jujubes and sweet glutinous rice.",
+    "price": 15.00,
+    "cuisine": "korean",
+    "diet": "low-carb",
+    "isBest": false,
+    "badge": "Wellness",
+    "image": "https://media.gettyimages.com/id/157696672/photo/samgyetang.jpg?s=170667a&w=0&k=20&c=j2o1fQqgipmz9IE7TXLzTKQldkWpo66O9d-agnz87Tg="
+  },
+  {
+    "id": 17,
+    "name": "Spicy Salmon Poke Bowl",
+    "description": "Nutritious avocado, cucumber, carrot, and spicy salmon rice bowl for health enthusiasts.",
+    "price": 13.50,
+    "cuisine": "japanese",
+    "diet": "vegan",
+    "isBest": true,
+    "badge": "Superfood",
+    "image": "https://media.gettyimages.com/id/1952949637/photo/spicy-salmon-bowl-with-rice-carrots-cucumber-and-avocado.jpg?s=170667a&w=0&k=20&c=ZVfSOtcmlgBBrt5X-4rMF32wk5DUaA26fkGnDgpjpw4="
+  }
+]
