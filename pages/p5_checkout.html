@@ -153,12 +153,39 @@
                   <span>Delivery Fee</span>
                   <span>$1.50</span>
                 </div>
+                <div id="discount-row" class="d-flex justify-content-between small mt-1 text-warning fw-bold" style="display: none !important;">
+                  <span>Promo Discount</span>
+                  <span id="discount-amount">-$3.00</span>
+                </div>
+              </div>
+
+              <!-- Promo Code Section -->
+              <div class="my-3 pt-3 border-top border-white-20">
+                <label class="small text-white-50 mb-2 font-title fw-bold">Have a Promo Code?</label>
+                <div class="input-group">
+                  <input
+                    type="text"
+                    id="promo-code-input"
+                    class="form-control form-control-sm bg-white bg-opacity-10 text-white border-white-20 rounded-start-pill ps-3"
+                    placeholder="e.g. KHMER10"
+                    style="font-size: 0.85rem;"
+                  />
+                  <button
+                    type="button"
+                    class="btn btn-warning btn-sm rounded-end-pill px-3 fw-bold text-dark"
+                    onclick="applyPromoCode()"
+                    style="background-color: var(--color-brand-yellow); border: none;"
+                  >
+                    Apply
+                  </button>
+                </div>
+                <div id="promo-message" class="small mt-2" style="display: none;"></div>
               </div>
             </div>
             
             <div class="d-flex justify-content-between align-items-center mb-4">
               <span class="h4 fw-bold mb-0">Total</span>
-              <span class="h4 fw-bold text-warning mb-0">$31.50</span>
+              <span id="checkout-total" class="h4 fw-bold text-warning mb-0">$31.50</span>
             </div>
             
             <button class="btn p5-btn-place-order w-100 py-3 d-flex align-items-center justify-content-center gap-2" onclick="simulateOrder()">
@@ -221,6 +248,28 @@
       function simulateOrder() {
         var myModal = new bootstrap.Modal(document.getElementById('orderSuccessModal'));
         myModal.show();
+      }
+
+      function applyPromoCode() {
+        const codeInput = document.getElementById('promo-code-input');
+        const code = codeInput.value.trim();
+        const msg = document.getElementById('promo-message');
+        const discountRow = document.getElementById('discount-row');
+        const checkoutTotal = document.getElementById('checkout-total');
+
+        if (code.length === 0) {
+          msg.style.display = 'block';
+          msg.style.color = '#fed65b';
+          msg.innerText = 'Please enter a valid promo code.';
+          return;
+        }
+
+        // Apply simulated discount
+        msg.style.display = 'block';
+        msg.style.color = '#2e7d32';
+        msg.innerText = `Promo code "${code.toUpperCase()}" applied! ($3.00 discount)`;
+        discountRow.style.setProperty('display', 'flex', 'important');
+        checkoutTotal.innerText = '$28.50';
       }
     </script>
   </body>
