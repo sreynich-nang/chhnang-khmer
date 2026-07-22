@@ -3,7 +3,7 @@
   <div class="container">
     <!-- FLEX CONTAINER -->
     <div
-      class="d-flex flex-column flex-md-row justify-content-between gap-4 text-center text-md-start"
+      class="d-flex flex-column flex-lg-row justify-content-between gap-4 text-center text-lg-start"
     >
       <!-- Brand -->
       <div style="flex: 1.5">
@@ -36,24 +36,15 @@
           Subscribe to receive fresh Cambodian recipes & weekly kit discounts.
         </p>
         
-        <form onsubmit="event.preventDefault(); alert('Thank you for subscribing!');" class="d-flex flex-column flex-sm-row gap-2">
-          <input
-            type="email"
-            class="form-control rounded-pill px-3 py-2 border-secondary-subtle"
-            placeholder="Enter your email"
-            aria-label="Email address for newsletter subscription"
-            required
-          />
-          <button
-            type="submit"
-            class="btn rounded-pill px-4 fw-bold text-nowrap btn-brand-orange"
-          >
+        <form onsubmit="event.preventDefault(); alert('Thank you for subscribing!');" class="d-flex flex-row gap-2">
+          <input type="email" class="form-control rounded-pill px-3 py-2 border-secondary-subtle" placeholder="Enter your email" aria-label="Email address for newsletter subscription" required="">
+          <button type="submit" class="btn rounded-pill px-2 px-sm-3 px-lg-4 py-2 fw-bold text-nowrap btn-brand-orange">
             Subscribe Here
           </button>
         </form>
 
         <div
-          class="d-flex justify-content-center justify-content-md-start gap-3 mt-3"
+          class="d-flex justify-content-center justify-content-lg-start gap-3 mt-3"
         >
           <button
             class="btn btn-outline-secondary rounded-circle d-flex align-items-center justify-content-center"
